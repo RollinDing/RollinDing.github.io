@@ -33,5 +33,5 @@ Here are some of my ongoing and past projects:
 
 ## Contact
 
-Feel free to reach out to me at [ding.ruy@northeastern.edu](mailto:email@example.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
+Feel free to reach out to me at [ding.ruy@northeastern.edu](mailto:ding.ruy@northeastern.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
 
