@@ -19,17 +19,17 @@ The primary objective of my work is building machine-learning systems that are b
 - **Data Analysis**: Traffic data analysis and event detection.
 
 
-## Selected Publications
+## Publications
 
-- **Ding, R.**, Su, L., Ding, A. A., Fei, Y., *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024).
-- **Ding, R.\***, Duan, S.\*, Xu X., Fei, Y. *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023).
-- **Ding, R.**, Gongye, C., Wang, S., Ding, A. A., Fei, Y., *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>.
-- **Ding, R.**, Zhang, Z., Zhang, X., Gongye, C., Fei, Y., & Ding, A. A. *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>.
-
-## Projects
-
-Here are some of my ongoing and past projects:
-
+- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024).
+- **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023).
+- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>.
+- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>.
+- Yize Li, Pu Zhao, **Ruyi Ding**, Tong Zhou, Yunsi Fei, Xiaolin Xu, Xue Lin *Neural Architecture Search for Adversarial Robustness via Learnable Pruning.* Frontiers in High Performance Computing.
+- Xiang Zhang, Ziyue Zhang, **Ruyi Ding**, Cheng Gongye, Aidong Adam Ding, & Yunsi Fei, (2022, June). *Ran$Net: An Anti-Ransomware Methodology based on Cache Monitoring and Deep Learning.* In Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI 2022).
+- Shixiang Zhu, **Ruyi Ding**, Minghe Zhang, Pascal Van Hentenryck, & Yao Xie, *Spatio-temporal point processes with attention for traffic congestion event modeling.* IEEE Transactions on Intelligent Transportation Systems. (2021)
+- Shixiang Zhu, Minghe Zhang, **Ruyi Ding**, & Yao Xie,  *Deep Fourier Kernel for Self-Attentive Point Processes.* In International Conference on Artificial Intelligence and Statistics (AISTATS 2021).
+- Fan Zhang, Xiaoxuan Lou, Xinjie Zhao, Shivam Bhasin, Wei He, **Ruyi Ding**, Samiya Qureshi, Kui Ren. *Persistent fault analysis on block ciphers.* IACR Transactions on Cryptographic Hardware and Embedded Systems. (2018)
 
 ## Contact
 
