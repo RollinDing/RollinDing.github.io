@@ -24,7 +24,7 @@ The primary objective of my work is building machine-learning systems that are b
 - **Ding, R.**, Su, L., Ding, A. A., Fei, Y., *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024).
 - **Ding, R.\***, Duan, S.\*, Xu X., Fei, Y. *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023).
 - **Ding, R.**, Gongye, C., Wang, S., Ding, A. A., Fei, Y., *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>.
-- **Ding, R.**, Zhang, Z., Zhang, X., Gongye, C., Fei, Y., \& Ding, A. A. *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation \& Test in Europe Conference \& Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>.
+- **Ding, R.**, Zhang, Z., Zhang, X., Gongye, C., Fei, Y., & Ding, A. A. *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>.
 
 ## Projects
 
@@ -33,5 +33,5 @@ Here are some of my ongoing and past projects:
 
 ## Contact
 
-Feel free to reach out to me at [ding.ruy@northeastern.edu](mailto:ding.ruy@northeastern.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
+Feel free to reach out to me at [ding.ruy[at]northeastern[dot]edu](mailto:ding.ruy@northeastern.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
 
