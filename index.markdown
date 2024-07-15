@@ -26,11 +26,11 @@ The primary objective of my work is building machine-learning systems that are b
 <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf">
   <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
 </a>
-- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection) 
+- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:red"> Distinguished Paper Award</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection) 
 <a href="https://arxiv.org/pdf/2303.15571">
   <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
 </a>
-- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection)
+- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:red"> Best Paper Awards Nomination</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection)
 <a href="https://par.nsf.gov/servlets/purl/10351468">
   <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
 </a>
