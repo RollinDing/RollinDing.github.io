@@ -4,12 +4,18 @@
 
 layout: home
 ---
-Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by [Yunsi Fei](https://coe.northeastern.edu/people/fei-yunsi/) in [NUEESS](http://nueess.coe.neu.edu/nueess/index.php/Main_Page)
-My research covers the intersection of AI security and hardware security. I am particularly focused on *neural network model robustness, privacy, IP protection* and *side-channel analysis*. 
+<div style="display: flex; align-items: flex-start;">
+    <div style="flex: 1;">
+      Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
+    </div>
+    <!-- <div style="flex: 0 0 auto; margin-left: 20px;">
+        <img src="./assets/images/personal.jpg" style="max-width: 120px; height: auto;" alt="Personal photo">
+    </div> -->
+</div>
+
 
 ## About Me
-
-The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to **Responsible AI** and **Reliable Computer Systems**.
+  The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to **Responsible AI** and **Reliable Computer Systems**.
 
 ## Research Interests
 
