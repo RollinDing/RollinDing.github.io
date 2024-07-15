@@ -4,10 +4,8 @@
 
 layout: home
 ---
-# Welcome to My Personal Page
-
-Hello! I am Ruyi Ding, a fourth year PhD student at College of Engineering of Northeastern University. 
-My research covers the intersection of AI security and hardware security. I am particularly focused on *neural network model robustness, privacy, and IP protection* and *side-channel analysis*. 
+Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by [Yunsi Fei](https://coe.northeastern.edu/people/fei-yunsi/) in [NUEESS](http://nueess.coe.neu.edu/nueess/index.php/Main_Page)
+My research covers the intersection of AI security and hardware security. I am particularly focused on *neural network model robustness, privacy, IP protection* and *side-channel analysis*. 
 
 ## About Me
 
