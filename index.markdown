@@ -21,10 +21,19 @@ The primary objective of my work is building machine-learning systems that are b
 
 ## Publications
 
-- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024).
-- **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023).
-- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>.
-- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>.
+- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) 
+- **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/VertexSerum)
+<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf">
+  <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
+</a>
+- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:blue"> Distinguished Paper Award</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection) 
+<a href="https://arxiv.org/pdf/2303.15571">
+  <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
+</a>
+- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:blue"> Best Paper Awards Nomination</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection)
+<a href="https://par.nsf.gov/servlets/purl/10351468">
+  <img src="./assets/images/arxiv-logo.svg" alt="Paper" width="40" height="40">
+</a>
 - Yize Li, Pu Zhao, **Ruyi Ding**, Tong Zhou, Yunsi Fei, Xiaolin Xu, Xue Lin *Neural Architecture Search for Adversarial Robustness via Learnable Pruning.* Frontiers in High Performance Computing.
 - Xiang Zhang, Ziyue Zhang, **Ruyi Ding**, Cheng Gongye, Aidong Adam Ding, & Yunsi Fei, (2022, June). *Ran$Net: An Anti-Ransomware Methodology based on Cache Monitoring and Deep Learning.* In Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI 2022).
 - Shixiang Zhu, **Ruyi Ding**, Minghe Zhang, Pascal Van Hentenryck, & Yao Xie, *Spatio-temporal point processes with attention for traffic congestion event modeling.* IEEE Transactions on Intelligent Transportation Systems. (2021)
