@@ -27,6 +27,8 @@ url: "https://RollinDing.github.io" # the base hostname & protocol for your site
 twitter_username: Ruyi Ding
 github_username:  RollinDing
 scholar_url: https://scholar.google.com/citations?user=lRVUgSAAAAAJ&hl=en
+github_url: https://github.com/RollinDing
+linkedin_url: https://www.linkedin.com/in/ruyi-ding-463a57169/
 
 # Build settings
 theme: minima
