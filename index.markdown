@@ -23,6 +23,7 @@ layout: home
 - **Side-channel Analysis**: Power/EM side channel anaylsis and micro-architecture SCA.
 - **Data Analysis**: Traffic data analysis and event detection.
 
+## News
 
 ## Publications
 
