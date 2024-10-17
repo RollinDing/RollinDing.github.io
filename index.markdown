@@ -13,7 +13,9 @@ layout: home
     </div> -->
 </div>
 
+
 ## About Me
+  <span style="color: red;">I am currently seeking opportunities for a faculty position in *Computer Engineering* and *Artificial Intelligence*!</span> 
   The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to **Responsible AI** and **Reliable Computer Systems**.
 
 ## Research Interests
@@ -24,9 +26,11 @@ layout: home
 - **Data Analysis**: Traffic data analysis and event detection.
 
 ## News
-
+- [2024-09] One paper is accepted with condition to **NDSS 2025**!
+- [2024-09] One paper is accepted in **NeurIPS 2024**!
 ## Publications
-
+- **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision).
+- Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024).
 - **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) 
 - **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/VertexSerum)
 <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf" target="_blank">PDF</a>
