@@ -28,6 +28,7 @@ layout: home
 ## News
 - [2024-09] One paper is accepted with condition to **NDSS 2025**!
 - [2024-09] One paper is accepted in **NeurIPS 2024**!
+
 ## Publications
 - **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision).
 - Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024).
