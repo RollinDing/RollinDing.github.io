@@ -3,4 +3,4 @@ layout: page
 title: CV
 permalink: /cv/
 ---
-Check my recent resume [here](../assets/resume/CV.pdf)
+<iframe src="../assets/resume/CV.pdf" width="100%" height="1000px" style="border: none;"></iframe>

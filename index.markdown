@@ -108,9 +108,9 @@ layout: home
 <div class="news">
     <h2>News</h2>
     <ul>
-        <li>[2024-10] One paper is accepted in <strong>NDSS 2025</strong>!</li>
-        <li>[2024-09] One paper is accepted in <strong>NeurIPS 2024</strong>!</li>
-        <li>[2024-07] One paper is accepted in <strong>ECCV 2024</strong>!</li>
+        <li>[2024-10] <a href="https://arxiv.org/pdf/2411.12508"> One paper </a>  is accepted in <strong><a href="https://www.ndss-symposium.org/ndss2025/" target="_blank">NDSS 2025 </a> </strong>!</li>
+        <li>[2024-09] <a href="https://arxiv.org/pdf/2410.03396"> One paper </a> is accepted in <strong><a href="https://neurips.cc/" target="_blank">NeurIPS 2024 </a></strong>!</li>
+        <li>[2024-07] <a href="https://arxiv.org/pdf/2410.08015"> One paper </a> is accepted in <strong><a href="https://eccv2024.ecva.net/" target="_blank">ECCV 2024 </a> </strong>!</li> 
     </ul>
 </div>
 ## Works
