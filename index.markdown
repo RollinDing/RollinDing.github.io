@@ -28,20 +28,196 @@ layout: home
         </div>
     </div>
 </div>
-<div style="display: flex; align-items: flex-start;">
-    <div style="flex: 1;">
-      Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
+
+<style>
+    .about-me, .news {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .about-me h2, .news h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+    }
+    .about-me p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+    }
+    .about-me span.highlight {
+        color: #d9534f;
+        font-weight: bold;
+    }
+    .news ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .news li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+    .news li::before {
+        content: "•";
+        color: #007bff;
+        font-size: 20px;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+</style>
+
+<!-- About Me -->
+<div class="about-me">
+    <h2>About Me</h2>
+    <p>
+        I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
+        <span class="highlight">I am currently seeking opportunities for a faculty position in <em>Computer Engineering</em> and <em>Artificial Intelligence</em>!</span> 
+        The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to <strong>Responsible AI</strong> and <strong>Hardware Security</strong>.
+    </p>
+</div>
+<style>
+    .news li {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        position: relative;
+        transition: transform 0.3s ease;
+    }
+    .news li:hover {
+        transform: translateX(5px); /* 悬停时向右移动 */
+    }
+    .news li::before {
+        content: "🎉"; /* 使用图标 */
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #007bff;
+    }
+</style>
+
+<div class="news">
+    <h2>News</h2>
+    <ul>
+        <li>[2024-10] One paper is accepted in <strong>NDSS 2025</strong>!</li>
+        <li>[2024-09] One paper is accepted in <strong>NeurIPS 2024</strong>!</li>
+        <li>[2024-07] One paper is accepted in <strong>ECCV 2024</strong>!</li>
+    </ul>
+</div>
+## Works
+<style>
+    .project-card {
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .project-card img {
+        width: 200px; /* 固定图片宽度 */
+        height: 200px; /* 固定图片高度 */
+        object-fit: cover; /* 确保图片按比例缩放并填充 */
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+    .project-card h2 {
+        margin: 0 0 10px;
+        font-size: 24px;
+    }
+    .project-card p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+    }
+    .project-card a {
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #007bff;
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        .project-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        .project-card img {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+
+<!-- 项目 list -->
+
+
+
+<div class="project-card">
+    <img src="/assets/images/ndss.png" alt="NDSS 2025">
+    <div>
+        <h2>Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing</h2>
+        <p>EncoderLock is a novel method that safeguards pre-trained encoders from malicious probing by restricting performance on prohibited domains while preserving functionality in authorized ones. Its domain-aware techniques and self-challenging training ensure robust protection, advancing the development of responsible AI.</p>
+        <a href="https://arxiv.org/pdf/2411.12508">Learn More →</a>
     </div>
-    <!-- <div style="flex: 0 0 auto; margin-left: 20px;">
-        <img src="./assets/images/personal.jpg" style="max-width: 120px; height: auto;" alt="Personal photo">
-    </div> -->
+</div>
+
+<div class="project-card">
+    <img src="/assets/images/neurips2024.png" alt="NeurIPS 2025">
+    <div>
+        <h2>GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction</h2>
+        <p>GraphCroc enhances graph autoencoders (GAEs) with cross-correlation, improving representation of features like islands and directional edges in multi-graph scenarios. It ensures robust reconstruction and reduces bias, outperforming self-correlation-based GAEs.</p>
+        <a href="https://arxiv.org/pdf/2410.03396">Learn More →</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="/assets/images/eccv24.png" alt="ECCV 2024">
+    <div>
+        <h2>Non-transferable Pruning</h2>
+        <p>NonTransferable Pruning (NTP) safeguards pretrained DNNs by controlling transferability to unauthorized domains via selective pruning. Using ADMM and fisher space regularization, NTP optimizes sparsity and non-transferable learning loss, measured by SLC-AUC. Experiments show NTP outperforms state-of-the-art methods, ensuring models are unsuitable for unauthorized transfer learning in supervised and self-supervised contexts.</p>
+        <a href="https://arxiv.org/pdf/2410.03396">Learn More →</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="/assets/images/iccv23.png" alt="ICCV 2023">
+    <div>
+        <h2>VertexSerum: Poisoning Graph Neural Networks for Link Inference</h2>
+        <p>VertexSerum enhances graph link stealing by amplifying connectivity leakage, using an attention mechanism for accurate node adjacency inference. It outperforms state-of-the-art attacks, boosting AUC scores by 9.8% across datasets and GNN structures. Effective in black-box and online settings, VertexSerum demonstrates real-world applicability in exploiting GNN vulnerabilities for link privacy breaches.</p>
+        <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf">Learn More →</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="/assets/images/asiaccs23.png" alt="asiaccs 2023">
+    <div>
+        <h2>EMShepherd: Detecting Adversarial Samples via Side-channel Leakage</h2>
+        <p>EMShepherd detects adversarial attacks by capturing electromagnetic (EM) traces of model execution, leveraging differences in EM footprints caused by adversarial inputs. Using benign samples and their EM traces, it trains classifiers and anomaly detectors, achieving a 100% detection rate for most adversarial types on FPGA accelerators. This air-gapped approach matches state-of-the-art white-box detectors without requiring internal model knowledge.</p>
+        <a href="https://arxiv.org/pdf/2303.15571">Learn More →</a>
+    </div>
+</div>
+
+<div class="project-card">
+    <img src="/assets/images/dac2025.png" alt="DAC 2025">
+    <div>
+        <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
+        <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
+        <a href=""> Coming soon...</a>
+    </div>
 </div>
 
 
-
-## About Me
-  <span style="color: red;">I am currently seeking opportunities for a faculty position in *Computer Engineering* and *Artificial Intelligence*!</span> 
-  The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to **Responsible AI** and **Reliable Computer Systems**.
 
 ## Research Interests
 
@@ -50,25 +226,6 @@ layout: home
 - **Side-channel Analysis**: Power/EM side-channel anaylsis and micro-architecture SCA.
 - **Data Analysis**: Traffic data analysis and event detection.
 
-## News
-- [2024-09] One paper is accepted with condition to **NDSS 2025**!
-- [2024-09] One paper is accepted in **NeurIPS 2024**!
-
-## Publications
-- **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision).
-- Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024).
-- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) 
-- **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/VertexSerum)
-<a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf" target="_blank">PDF</a>
-- **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:red"> Distinguished Paper Award</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection) 
-<a href="https://arxiv.org/pdf/2303.15571" target="_blank">PDF</a>
-- **Ruyi Ding**, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, & Aidong Adam Ding *A cross-platform cache timing attack framework via deep learning.* In 2022 Design, Automation & Test in Europe Conference & Exhibition (DATE 2022).  <span style="color:red"> Best Paper Awards Nomination</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection)
-<a href="https://par.nsf.gov/servlets/purl/10351468" target="_blank">PDF</a>
-- Yize Li, Pu Zhao, **Ruyi Ding**, Tong Zhou, Yunsi Fei, Xiaolin Xu, Xue Lin *Neural Architecture Search for Adversarial Robustness via Learnable Pruning.* Frontiers in High Performance Computing.
-- Xiang Zhang, Ziyue Zhang, **Ruyi Ding**, Cheng Gongye, Aidong Adam Ding, & Yunsi Fei, (2022, June). *Ran$Net: An Anti-Ransomware Methodology based on Cache Monitoring and Deep Learning.* In Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI 2022).
-- Shixiang Zhu, **Ruyi Ding**, Minghe Zhang, Pascal Van Hentenryck, & Yao Xie, *Spatio-temporal point processes with attention for traffic congestion event modeling.* IEEE Transactions on Intelligent Transportation Systems. (2021)
-- Shixiang Zhu, Minghe Zhang, **Ruyi Ding**, & Yao Xie,  *Deep Fourier Kernel for Self-Attentive Point Processes.* In International Conference on Artificial Intelligence and Statistics (AISTATS 2021).
-- Fan Zhang, Xiaoxuan Lou, Xinjie Zhao, Shivam Bhasin, Wei He, **Ruyi Ding**, Samiya Qureshi, Kui Ren. *Persistent fault analysis on block ciphers.* IACR Transactions on Cryptographic Hardware and Embedded Systems. (2018)
 
 ## Contact
 
