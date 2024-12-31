@@ -4,6 +4,20 @@
 
 layout: home
 ---
+<div style="display: flex; align-items: center; margin-bottom: 40px;">
+    <div style="flex: 0 0 auto; margin-right: 20px;">
+        <img src="./assets/images/personal.jpg" style="max-width: 120px; height: auto; border-radius: 50%;" alt="Personal photo">
+    </div>
+    <div style="flex: 1;">
+        <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
+        <p style="margin: 5px 0; font-size: 16px; color: #555;">Final Year PhD Student, Northeastern University</p>
+        <p style="margin: 5px 0; font-size: 14px; color: #777;">
+            Research Interests: AI Security, Hardware Security, Side-Channel Analysis, Data Analysis
+        </p>
+    </div>
+</div>
+
+
 <div style="display: flex; align-items: flex-start;">
     <div style="flex: 1;">
       Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
@@ -12,6 +26,7 @@ layout: home
         <img src="./assets/images/personal.jpg" style="max-width: 120px; height: auto;" alt="Personal photo">
     </div> -->
 </div>
+
 
 
 ## About Me
