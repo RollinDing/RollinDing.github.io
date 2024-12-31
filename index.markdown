@@ -4,20 +4,30 @@
 
 layout: home
 ---
-<div style="display: flex; align-items: center; margin-bottom: 40px;">
-    <div style="flex: 0 0 auto; margin-right: 20px;">
-        <img src="./assets/images/personal.jpg" style="max-width: 120px; height: auto; border-radius: 50%;" alt="Personal photo">
-    </div>
-    <div style="flex: 1;">
-        <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
-        <p style="margin: 5px 0; font-size: 16px; color: #555;">Final Year PhD Student, Northeastern University</p>
-        <p style="margin: 5px 0; font-size: 14px; color: #777;">
-            Research Interests: AI Security, Hardware Security, Side-Channel Analysis, Data Analysis
-        </p>
+<div style="background-color: #f9f9f9; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 40px; position: relative;">
+    <!-- 签名作为装饰 -->
+    <img src="./assets/images/signature.png" style="position: absolute; top: 10px; right: 10px; max-width: 50px; height: auto; opacity: 0.8;" alt="Ruyi Signature">
+    <div style="display: flex; align-items: center;">
+        <!-- 照片 -->
+        <div style="flex: 0 0 auto; margin-right: 30px;">
+            <img src="./assets/images/personal.jpg" style="max-width: 150px; height: auto; border-radius: 5px;" alt="Personal photo">
+        </div>
+        <!-- 英文简介 -->
+        <div style="flex: 1;">
+            <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
+            <p style="margin: 5px 0; font-size: 16px; color: #555;">Final Year PhD Student, Northeastern University</p>
+            <p style="margin: 5px 0; font-size: 14px; color: #777;">
+                Research Interests: AI Security, Hardware Security, Side-Channel Analysis
+            </p>
+            <p style="margin: 5px 0; font-size: 14px; color: #777; font-style: italic;">
+                “如意”在中文中寓意“顺遂心意”，象征着对美好未来的追求与坚定信念。
+            </p>
+            <p style="margin: 5px 0; font-size: 14px; color: #777; font-style: italic;">
+            In Chinese, 'Ruyi' (如意) conveys the meaning of 'fulfilling one's aspirations,' representing the pursuit of a prosperous future and steadfast resolve.
+                </p>
+        </div>
     </div>
 </div>
-
-
 <div style="display: flex; align-items: flex-start;">
     <div style="flex: 1;">
       Hello! I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
@@ -37,7 +47,7 @@ layout: home
 
 - **AI security**: Exploring machine learning security and privacy issue during training, inference and deployment.
 - **Hardware Security**: Security and Privacy of embedding DNNs.
-- **Side-channel Analysis**: Power/EM side channel anaylsis and micro-architecture SCA.
+- **Side-channel Analysis**: Power/EM side-channel anaylsis and micro-architecture SCA.
 - **Data Analysis**: Traffic data analysis and event detection.
 
 ## News
