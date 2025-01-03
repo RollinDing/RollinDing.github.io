@@ -234,7 +234,7 @@ layout: home
 
 ## Research Interests
 
-- **AI security**: Exploring machine learning security and privacy issue during training, inference and deployment.
+- **AI Security**: Exploring machine learning security and privacy issue during training, inference and deployment.
 - **Hardware Security**: Security and Privacy of embedding DNNs.
 - **Side-channel Analysis**: Power/EM side-channel anaylsis and micro-architecture SCA.
 - **Data Analysis**: Traffic data analysis and event detection.
