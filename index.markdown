@@ -121,6 +121,8 @@ layout: home
 <div class="news">
     <h2>News</h2>
     <ul>
+        <li>[2025-02] One paper is accepted in <strong><a href="https://www.dac.com/" target="_blank">DAC 2025 </a> </strong> </li>
+        <li>[2025-02] I delivered a talk at LSU. </li>
         <li>[2025-01]   
             <span class="highlight" style="font-weight: bold; color: red;">I was awarded the Internet Society Fellowship!</span> 
             Thank you, NDSS 2025!
@@ -179,6 +181,14 @@ layout: home
 <!-- 项目 list -->
 
 
+<div class="project-card">
+    <img src="/assets/images/dac2025.png" alt="DAC 2025">
+    <div>
+        <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
+        <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
+        <a href=""> Coming soon...</a>
+    </div>
+</div>
 
 <div class="project-card">
     <img src="/assets/images/ndss.png" alt="NDSS 2025">
@@ -225,14 +235,6 @@ layout: home
     </div>
 </div>
 
-<div class="project-card">
-    <img src="/assets/images/dac2025.png" alt="DAC 2025">
-    <div>
-        <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
-        <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
-        <a href=""> Coming soon...</a>
-    </div>
-</div>
 
 
 
