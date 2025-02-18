@@ -124,7 +124,6 @@ layout: home
         <li>[2025-02] Received Northeastern PhD Network Travel Award. Thank you, Northeastern! </li>
         <li>[2025-02] One paper is accepted in <strong><a href="http://www.hostsymposium.org/" target="_blank">HOST 2025 </a> </strong> </li>
         <li>[2025-02] One paper is accepted in <strong><a href="https://www.dac.com/" target="_blank">DAC 2025 </a> </strong> </li>
-        <li>[2025-02] Delivered a talk at LSU. </li>
         <li>[2025-01]   
             <span class="highlight" style="font-weight: bold; color: red;">I was awarded the Internet Society Fellowship!</span> 
             Thank you, NDSS 2025!
