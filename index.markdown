@@ -23,7 +23,7 @@ layout: home
     <div style="display: flex; align-items: center;">
         <!-- 照片 -->
         <div style="flex: 0 0 auto; margin-right: 30px;">
-            <img src="./assets/images/personal.jpg" style="max-width: 150px; height: auto; border-radius: 5px;" alt="Personal photo">
+            <img src="./assets/images/photo.jpeg" style="max-width: 150px; height: auto; border-radius: 5px;" alt="Personal photo">
         </div>
         <!-- 英文简介 -->
         <div style="flex: 1;">
@@ -90,12 +90,58 @@ layout: home
 <!-- About Me -->
 <div class="about-me">
     <h2>About Me</h2>
-    <p>
-        I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
-        <span class="highlight">I am currently seeking opportunities for a faculty position in <em>Computer Engineering</em> and <em>Artificial Intelligence</em>!</span> 
-        The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to <strong>Responsible AI</strong> and <strong>Hardware Security</strong>.
-    </p>
+    <div class="summary">
+        <p>
+            I am Ruyi Ding, a final year PhD candidate at Northeastern University working with <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in the <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a> group. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.
+            <span class="highlight">Actively seeking faculty positions in Computer Engineering & AI.</span>
+        </p>
+        <a href="javascript:void(0);" class="read-more">Read more...</a>
+    </div>
+
+    <div class="full-content" style="display: none;">
+        <p>
+            My work sits at the intersection of machine learning and hardware security, with three primary thrusts:
+            <ul>
+                <li>Developing secure and privacy-preserving ML systems</li>
+                <li>Detecting/mitigating hardware vulnerabilities through side-channel analysis</li>
+                <li>ML-hardware co-design for security applications</li>
+            </ul>
+        </p>
+        <p>
+            These efforts aim to advance two critical domains: <strong>Responsible AI</strong> (ensuring AI systems are secure and ethical) and <strong>Hardware Security</strong> (building trustworthy computing foundations). My approach emphasizes both theoretical analysis of modern architectures and practical system implementations.
+        </p>
+        <a href="javascript:void(0);" class="show-less">Show less...</a>
+    </div>
 </div>
+
+<style>
+.highlight {
+    font-weight: 600;
+    color: #2c3e50;
+}
+.read-more, .show-less {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.read-more:hover, .show-less:hover {
+    color: #2980b9;
+}
+</style>
+
+<script>
+document.querySelector('.read-more').addEventListener('click', function() {
+    document.querySelector('.summary').style.display = 'none';
+    document.querySelector('.full-content').style.display = 'block';
+});
+
+document.querySelector('.show-less').addEventListener('click', function() {
+    document.querySelector('.full-content').style.display = 'none';
+    document.querySelector('.summary').style.display = 'block';
+});
+</script>
+
+
 <style>
     .news li {
         font-size: 16px;
