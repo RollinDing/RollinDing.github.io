@@ -4,9 +4,9 @@ title: Publication List
 permalink: /project/
 ---
 ## Publications
-- **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision).
-- Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024).
-- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) 
+- **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/EncoderLock) <a href="https://arxiv.org/pdf/2411.12508" target="_blank">PDF</a>
+- Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024). <a href="https://arxiv.org/pdf/2410.03396" target="_blank">PDF</a>
+- **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) <a href="https://arxiv.org/pdf/2410.08015" target="_blank">PDF</a>
 - **Ruyi Ding\***, Shijin Duan\*, Xiaolin Xu, Yunsi Fei, *VertexSerum: Poisoning Graph Neural Networks for Link Inference.* International Conference on Computer Vision (ICCV 2023). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/VertexSerum)
 <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf" target="_blank">PDF</a>
 - **Ruyi Ding**, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei, *EMShepherd: Detecting Adversarial Samples via Side-channel Leakage.*  ACM ASIA Conference on Computer and Communications Security (ACM ASIACCS 2023). <span style="color:red"> Distinguished Paper Award</span>. [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/em-adversarial-detection) 

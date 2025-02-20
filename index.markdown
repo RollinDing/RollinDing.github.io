@@ -147,7 +147,7 @@ layout: home
     .project-card img {
         width: 200px; /* 固定图片宽度 */
         height: 200px; /* 固定图片高度 */
-        object-fit: cover; /* 确保图片按比例缩放并填充 */
+        object-fit: contain; 
         border-radius: 5px;
         margin-right: 20px;
     }
