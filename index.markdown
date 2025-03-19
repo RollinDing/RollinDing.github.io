@@ -167,6 +167,7 @@ document.querySelector('.show-less').addEventListener('click', function() {
 <div class="news">
     <h2>News</h2>
     <ul>
+    <li>[2025-03] Received Northeastern <strong>2025 Outstanding PhD Student Research Award</strong>. Thank you, Northeastern! </li>
         <li>[2025-02] Received Northeastern PhD Network Travel Award. Thank you, Northeastern! </li>
         <li>[2025-02] One paper is accepted in <strong><a href="http://www.hostsymposium.org/" target="_blank">HOST 2025 </a> </strong> </li>
         <li>[2025-02] One paper is accepted in <strong><a href="https://www.dac.com/" target="_blank">DAC 2025 </a> </strong> </li>
