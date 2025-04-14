@@ -92,8 +92,9 @@ layout: home
     <h2>About Me</h2>
     <div class="summary">
         <p>
-            I am Ruyi Ding, a final year PhD candidate at Northeastern University working with <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in the <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a> group. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.
-            <span class="highlight">Actively seeking faculty positions in Computer Engineering & AI.</span>
+            I am Ruyi Ding, a fifth year Ph.D. candidate at Northeastern University working with <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in the <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a> group. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.<br>
+            <span class="highlight">I will join the ECE Department at Louisiana State University as an assistant professor in Fall 2025. </span> <br>
+            <span class="highlight">I am actively looking for Ph.D. students. Feel free to shoot me an email if you are interested in AI security and hardware security!</span>
         </p>
         <a href="javascript:void(0);" class="read-more">Read more...</a>
     </div>
@@ -167,6 +168,8 @@ document.querySelector('.show-less').addEventListener('click', function() {
 <div class="news">
     <h2>News</h2>
     <ul>
+    <li>[2025-04] Received <strong>HOST 2025 Travel Grant</strong>. Thank you, HOST! </li>
+    <li>[2025-04] Received <strong>DAC Young Fellow</strong>. Thank you, DAC! </li>
     <li>[2025-03] Received Northeastern <strong>2025 Outstanding PhD Student Research Award</strong>. Thank you, Northeastern! </li>
         <li>[2025-02] Received Northeastern PhD Network Travel Award. Thank you, Northeastern! </li>
         <li>[2025-02] One paper is accepted in <strong><a href="http://www.hostsymposium.org/" target="_blank">HOST 2025 </a> </strong> </li>
@@ -234,7 +237,7 @@ document.querySelector('.show-less').addEventListener('click', function() {
     <div>
         <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
         <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
-        <a href=""> Coming soon...</a>
+        <a href="https://arxiv.org/pdf/2502.15012">Learn More →</a>
     </div>
 </div>
 

@@ -4,6 +4,8 @@ title: Publication List
 permalink: /project/
 ---
 ## Publications
+- **Ruyi Ding\***, Tianhong Xu\*, Aidong Adam Ding, Yunsi Fei. *Graph in the Vault: Protecting Edge GNN Inference with Trusted Execution Environment.* Design Automation Conference. (DAC2025)<a href="https://arxiv.org/pdf/2502.15012" target="_blank">PDF</a>
+- **Ruyi Ding**, Cheng Gongye, Davis Ranney, Aidong Adam Ding, Yunsi Fei. *MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction.* IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2025) <span style="color:red"> Best Paper Awards Nomination</span> <a href="https://arxiv.org/pdf/2502.15020" target="_blank">PDF</a>
 - **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/EncoderLock) <a href="https://arxiv.org/pdf/2411.12508" target="_blank">PDF</a>
 - Shijin Duan\*, **Ruyi Ding\***, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu, *GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction.* The Thirty-Eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024). <a href="https://arxiv.org/pdf/2410.03396" target="_blank">PDF</a>
 - **Ruyi Ding**, Lili Su, Aidong Adam Ding, Yunsi Fei, *Non-transferable Pruning.* The 18th European Conference on Computer Vision (ECCV 2024). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/DNN-NTL-Pruning) <a href="https://arxiv.org/pdf/2410.08015" target="_blank">PDF</a>
