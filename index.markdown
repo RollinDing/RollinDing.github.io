@@ -168,6 +168,7 @@ document.querySelector('.show-less').addEventListener('click', function() {
 <div class="news">
     <h2>News</h2>
     <ul>
+    <li>[2025-05] Invited to serve as a TPC member for ICCAD 2025 </li>
     <li>[2025-04] Received <strong>HOST 2025 Travel Grant</strong>. Thank you, HOST! </li>
     <li>[2025-04] Received <strong>DAC Young Fellow</strong>. Thank you, DAC! </li>
     <li>[2025-03] Received Northeastern <strong>2025 Outstanding PhD Student Research Award</strong>. Thank you, Northeastern! </li>
