@@ -28,7 +28,8 @@ layout: home
         <!-- 英文简介 -->
         <div style="flex: 1;">
             <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
-            <p style="margin: 5px 0; font-size: 16px; color: #555;">Final Year PhD Student, Northeastern University</p>
+                    <p style="margin: 5px 0; font-size: 16px; color: #555;"><strong>Assistant Professor</strong>, Division of Electrical and Computer Engineering, <a href="https://www.lsu.edu/" target="_blank">Louisiana State University (LSU)</a></p>
+                    <p style="margin: 5px 0; font-size: 14px; color: #777;"><em>Previously: PhD Student, Northeastern University</em></p>
             <p style="margin: 5px 0; font-size: 14px; color: #777;">
                 Research Interests: AI Security, Hardware Security, Side-Channel Analysis
             </p>
@@ -38,6 +39,9 @@ layout: home
             <p style="margin: 5px 0; font-size: 14px; color: #777; font-style: italic;">
             In Chinese, 'Ruyi' (如意) conveys the meaning of 'fulfilling one's aspirations,' representing the pursuit of a prosperous future and steadfast resolve.
                 </p>
+            <p style="margin: 10px 0; font-size: 15px;">
+                <a href="/prospective-students/" style="display:inline-block; background:#007bff; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none;">Prospective PhD Students: Apply / Contact</a>
+            </p>
         </div>
     </div>
 </div>
@@ -92,9 +96,8 @@ layout: home
     <h2>About Me</h2>
     <div class="summary">
         <p>
-            I am Ruyi Ding, a fifth year Ph.D. candidate at Northeastern University working with <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in the <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a> group. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.<br>
-            <span class="highlight">I will join the ECE Department at Louisiana State University as an assistant professor in Fall 2025. </span> <br>
-            <span class="highlight">I am actively looking for Ph.D. students. Feel free to shoot me an email if you are interested in AI security and hardware security!</span>
+            I am an Assistant Professor at the Division of Electrical and Computer Engineering at Louisiana State University. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.<br>
+            <span class="highlight">I am actively looking for Ph.D. students for Spring 2026 and Fall 2026. Feel free to shoot me an email if you are interested in AI security and hardware security!</span>
         </p>
         <a href="javascript:void(0);" class="read-more">Read more...</a>
     </div>
@@ -168,6 +171,7 @@ document.querySelector('.show-less').addEventListener('click', function() {
 <div class="news">
     <h2>News</h2>
     <ul>
+    <li>[2025-08] One paper is accepted in <strong><a href="https://www.sigsac.org/ccs/CCS2025/accepted-papers/" target="_blank">CCS 2025 </a> </strong>. See you in Taipei, China! </li>
     <li>[2025-05] Invited to serve as a TPC member for ICCAD 2025 </li>
     <li>[2025-04] Received <strong>HOST 2025 Travel Grant</strong>. Thank you, HOST! </li>
     <li>[2025-04] Received <strong>DAC Young Fellow</strong>. Thank you, DAC! </li>
@@ -300,5 +304,5 @@ document.querySelector('.show-less').addEventListener('click', function() {
 
 ## Contact
 
-Feel free to reach out to me at [ding.ruy[at]northeastern[dot]edu](mailto:ding.ruy@northeastern.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
+Feel free to reach out to me at [ruyiding[at]lsu[dot]edu](mailto:ruyiding@lsu.edu) or connect with me on [LinkedIn](https://www.linkedin.com/in/ruyi-ding-463a57169/).
 

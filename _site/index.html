@@ -43,7 +43,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/cv/">CV</a><a class="page-link" href="/life/">Life</a><a class="page-link" href="/project/">Publication List</a></div>
+        <div class="trigger"><a class="page-link" href="/cv/">CV</a><a class="page-link" href="/prospective-students/">Prospective PhD Students</a><a class="page-link" href="/life/">Life</a><a class="page-link" href="/project/">Publication List</a></div>
       </nav></div>
 </header><main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -66,12 +66,13 @@
     <div style="display: flex; align-items: center;">
         <!-- 照片 -->
         <div style="flex: 0 0 auto; margin-right: 30px;">
-            <img src="./assets/images/personal.jpg" style="max-width: 150px; height: auto; border-radius: 5px;" alt="Personal photo" />
+            <img src="./assets/images/photo.jpeg" style="max-width: 150px; height: auto; border-radius: 5px;" alt="Personal photo" />
         </div>
         <!-- 英文简介 -->
         <div style="flex: 1;">
             <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
-            <p style="margin: 5px 0; font-size: 16px; color: #555;">Final Year PhD Student, Northeastern University</p>
+                    <p style="margin: 5px 0; font-size: 16px; color: #555;"><strong>Assistant Professor</strong>, Division of Electrical and Computer Engineering, <a href="https://www.lsu.edu/" target="_blank">Louisiana State University (LSU)</a></p>
+                    <p style="margin: 5px 0; font-size: 14px; color: #777;"><em>Previously: PhD Student, Northeastern University</em></p>
             <p style="margin: 5px 0; font-size: 14px; color: #777;">
                 Research Interests: AI Security, Hardware Security, Side-Channel Analysis
             </p>
@@ -81,6 +82,9 @@
             <p style="margin: 5px 0; font-size: 14px; color: #777; font-style: italic;">
             In Chinese, 'Ruyi' (如意) conveys the meaning of 'fulfilling one's aspirations,' representing the pursuit of a prosperous future and steadfast resolve.
                 </p>
+            <p style="margin: 10px 0; font-size: 15px;">
+                <a href="/prospective-students/" style="display:inline-block; background:#007bff; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none;">Prospective PhD Students: Apply / Contact</a>
+            </p>
         </div>
     </div>
 </div>
@@ -133,12 +137,57 @@
 <!-- About Me -->
 <div class="about-me">
     <h2>About Me</h2>
-    <p>
-        I am Ruyi Ding, a final year PhD student from Northeastern University, supervised by <a href="https://coe.northeastern.edu/people/fei-yunsi/" target="_blank">Yunsi Fei</a> in <a href="http://nueess.coe.neu.edu/nueess/index.php/Main_Page" target="_blank">NUEESS</a>. My research covers the intersection of AI security and hardware security. I am particularly focused on <em>neural network model robustness, privacy, IP protection</em> and <em>side-channel analysis</em>. 
-        <span class="highlight">I am currently seeking opportunities for a faculty position in <em>Computer Engineering</em> and <em>Artificial Intelligence</em>!</span> 
-        The primary objective of my work is building machine-learning systems that are both secure and privacy-preserving; identifying and mitigating hardware side channels and micro-architectural vulnerabilities; employing machine learning-hardware co-design for security applications. My efforts aim to contribute significantly to <strong>Responsible AI</strong> and <strong>Hardware Security</strong>.
-    </p>
+    <div class="summary">
+        <p>
+            I am an Assistant Professor at the Division of Electrical and Computer Engineering at Louisiana State University. My research focuses on AI security and hardware security, specializing in neural network robustness, privacy preservation, and side-channel analysis.<br />
+            <span class="highlight">I am actively looking for Ph.D. students for Spring 2026 and Fall 2026. Feel free to shoot me an email if you are interested in AI security and hardware security!</span>
+        </p>
+        <a href="javascript:void(0);" class="read-more">Read more...</a>
+    </div>
+
+    <div class="full-content" style="display: none;">
+        <p>
+            My work sits at the intersection of machine learning and hardware security, with three primary thrusts:
+            <ul>
+                <li>Developing secure and privacy-preserving ML systems</li>
+                <li>Detecting/mitigating hardware vulnerabilities through side-channel analysis</li>
+                <li>ML-hardware co-design for security applications</li>
+            </ul>
+        </p>
+        <p>
+            These efforts aim to advance two critical domains: <strong>Responsible AI</strong> (ensuring AI systems are secure and ethical) and <strong>Hardware Security</strong> (building trustworthy computing foundations). My approach emphasizes both theoretical analysis of modern architectures and practical system implementations.
+        </p>
+        <a href="javascript:void(0);" class="show-less">Show less...</a>
+    </div>
 </div>
+
+<style>
+.highlight {
+    font-weight: 600;
+    color: #2c3e50;
+}
+.read-more, .show-less {
+    color: #3498db;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.read-more:hover, .show-less:hover {
+    color: #2980b9;
+}
+</style>
+
+<script>
+document.querySelector('.read-more').addEventListener('click', function() {
+    document.querySelector('.summary').style.display = 'none';
+    document.querySelector('.full-content').style.display = 'block';
+});
+
+document.querySelector('.show-less').addEventListener('click', function() {
+    document.querySelector('.full-content').style.display = 'none';
+    document.querySelector('.summary').style.display = 'block';
+});
+</script>
+
 <style>
     .news li {
         font-size: 16px;
@@ -164,6 +213,14 @@
 <div class="news">
     <h2>News</h2>
     <ul>
+    <li>[2025-08] One paper is accepted in <strong><a href="https://www.sigsac.org/ccs/CCS2025/accepted-papers/" target="_blank">CCS 2025 </a> </strong>. See you in Taipei, China! </li>
+    <li>[2025-05] Invited to serve as a TPC member for ICCAD 2025 </li>
+    <li>[2025-04] Received <strong>HOST 2025 Travel Grant</strong>. Thank you, HOST! </li>
+    <li>[2025-04] Received <strong>DAC Young Fellow</strong>. Thank you, DAC! </li>
+    <li>[2025-03] Received Northeastern <strong>2025 Outstanding PhD Student Research Award</strong>. Thank you, Northeastern! </li>
+        <li>[2025-02] Received Northeastern PhD Network Travel Award. Thank you, Northeastern! </li>
+        <li>[2025-02] One paper is accepted in <strong><a href="http://www.hostsymposium.org/" target="_blank">HOST 2025 </a> </strong> </li>
+        <li>[2025-02] One paper is accepted in <strong><a href="https://www.dac.com/" target="_blank">DAC 2025 </a> </strong> </li>
         <li>[2025-01]   
             <span class="highlight" style="font-weight: bold; color: red;">I was awarded the Internet Society Fellowship!</span> 
             Thank you, NDSS 2025!
@@ -187,7 +244,7 @@
     .project-card img {
         width: 200px; /* 固定图片宽度 */
         height: 200px; /* 固定图片高度 */
-        object-fit: cover; /* 确保图片按比例缩放并填充 */
+        object-fit: contain; 
         border-radius: 5px;
         margin-right: 20px;
     }
@@ -220,6 +277,15 @@
 </style>
 
 <!-- 项目 list -->
+
+<div class="project-card">
+    <img src="/assets/images/dac2025.png" alt="DAC 2025" />
+    <div>
+        <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
+        <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
+        <a href="https://arxiv.org/pdf/2502.15012">Learn More →</a>
+    </div>
+</div>
 
 <div class="project-card">
     <img src="/assets/images/ndss.png" alt="NDSS 2025" />
@@ -266,15 +332,6 @@
     </div>
 </div>
 
-<div class="project-card">
-    <img src="/assets/images/dac2025.png" alt="DAC 2025" />
-    <div>
-        <h2>Graph in the Vault: Protecting Edge GNN Inference with TEE</h2>
-        <p>GNNVault introduces the first secure Graph Neural Network (GNN) deployment strategy using Trusted Execution Environment (TEE) to protect model IP and data privacy on edge devices. By partitioning the model before training and employing a private GNN rectifier, GNNVault effectively safeguards GNN inference against link stealing attacks</p>
-        <a href=""> Coming soon...</a>
-    </div>
-</div>
-
 <h2 id="research-interests">Research Interests</h2>
 
 <ul>
@@ -286,7 +343,7 @@
 
 <h2 id="contact">Contact</h2>
 
-<p>Feel free to reach out to me at <a href="mailto:ding.ruy@northeastern.edu">ding.ruy[at]northeastern[dot]edu</a> or connect with me on <a href="https://www.linkedin.com/in/ruyi-ding-463a57169/">LinkedIn</a>.</p>
+<p>Feel free to reach out to me at <a href="mailto:ruyiding@lsu.edu">ruyiding[at]lsu[dot]edu</a> or connect with me on <a href="https://www.linkedin.com/in/ruyi-ding-463a57169/">LinkedIn</a>.</p>
 
 </div>
 
