@@ -20,3 +20,32 @@
   width: 24px;
   vertical-align: middle;
 }
+
+/* Publications list styling */
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub-item {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.pub-venue {
+  color: #285fe8;
+  font-weight: 600;
+}
+
+.pub-links a {
+  margin-right: 12px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #285fe8;
+}
+
+.pub-links a:hover {
+  text-decoration: underline;
+}
