@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Publication List
+title: Publications
 permalink: /project/
 ---
 ## Publications
+- **Ruyi Ding\***, Tianhong Xu\*, Xinyi Shen, Aidong Adam Ding, Yunsi Fei. *MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs* ACM CCS. (CCS2025)<a href="https://arxiv.org/pdf/2508.15036" target="_blank">PDF</a>
+- **Ruyi Ding**, Cheng Gongye, Davis Ranney, Aidong Adam Ding, Yunsi Fei. *MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction*. IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2025) <a href="https://arxiv.org/pdf/2502.15020" target="_blank">PDF</a>
 - **Ruyi Ding\***, Tianhong Xu\*, Aidong Adam Ding, Yunsi Fei. *Graph in the Vault: Protecting Edge GNN Inference with Trusted Execution Environment.* Design Automation Conference. (DAC2025)<a href="https://arxiv.org/pdf/2502.15012" target="_blank">PDF</a>
 - **Ruyi Ding**, Cheng Gongye, Davis Ranney, Aidong Adam Ding, Yunsi Fei. *MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction.* IEEE International Symposium on Hardware Oriented Security and Trust (HOST 2025) <span style="color:red"> Best Paper Awards Nomination</span> <a href="https://arxiv.org/pdf/2502.15020" target="_blank">PDF</a>
 - **Ruyi Ding**, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei, *Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing.* (NDSS Symposium 2025, accepted with minor revision). [![GitHub](./assets/images/github.svg)](https://github.com/RollinDing/EncoderLock) <a href="https://arxiv.org/pdf/2411.12508" target="_blank">PDF</a>

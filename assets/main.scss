@@ -49,3 +49,41 @@
 .pub-links a:hover {
   text-decoration: underline;
 }
+
+/* News list styling */
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-item {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #555;
+  padding-left: 30px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateX(5px);
+}
+
+.news-item::before {
+  content: "🎉";
+  font-size: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff;
+}
+
+.news-toggle {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.news-toggle a {
+  font-size: 14px;
+}
