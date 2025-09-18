@@ -312,9 +312,9 @@ document.querySelector('.show-less').addEventListener('click', function() {
 <a id="publications"></a>
 
 <ul class="pub-list">
-  <li class="pub-item"><span class="pub-venue">CCS 2025</span> (to appear). Secure GNN Inference under Edge Deployment Threats. <span class="pub-links"><a href="https://www.sigsac.org/ccs/CCS2025/accepted-papers/" target="_blank">Venue</a></span></li>
+  <li class="pub-item"><span class="pub-venue">CCS 2025</span>. MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs <span class="pub-links"><a href="https://arxiv.org/abs/2508.15036" target="_blank">PDF</a></span></li>
   <li class="pub-item"><span class="pub-venue">DAC 2025</span>. Graph in the Vault: Protecting Edge GNN Inference with TEE. <span class="pub-links"><a href="https://arxiv.org/pdf/2502.15012" target="_blank">PDF</a></span></li>
-  <li class="pub-item"><span class="pub-venue">HOST 2025</span>. (Title forthcoming). <span class="pub-links"><a href="http://www.hostsymposium.org/" target="_blank">Venue</a></span></li>
+  <li class="pub-item"><span class="pub-venue">HOST 2025</span>. MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction. <span class="pub-links"><a href="https://arxiv.org/pdf/2502.15020" target="_blank">PDF</a></span></li>
   <li class="pub-item"><span class="pub-venue">NDSS 2025</span>. Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing. <span class="pub-links"><a href="https://arxiv.org/pdf/2411.12508" target="_blank">PDF</a></span></li>
   <li class="pub-item"><span class="pub-venue">NeurIPS 2024</span>. GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction. <span class="pub-links"><a href="https://arxiv.org/pdf/2410.03396" target="_blank">PDF</a></span></li>
   <li class="pub-item"><span class="pub-venue">ECCV 2024</span>. Non-transferable Pruning for Controlled Model Reuse. <span class="pub-links"><a href="https://arxiv.org/pdf/2410.08015" target="_blank">PDF</a></span></li>
