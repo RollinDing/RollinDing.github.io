@@ -29,7 +29,7 @@ layout: home
         <div style="flex: 1;">
             <h1 style="margin: 0; font-size: 28px;">Ruyi Ding</h1>
                     <p style="margin: 5px 0; font-size: 16px; color: #555;"><strong>Assistant Professor</strong>, Division of Electrical and Computer Engineering, <a href="https://www.lsu.edu/" target="_blank">Louisiana State University (LSU)</a></p>
-                    <p style="margin: 5px 0; font-size: 14px; color: #777;"><em>Previously: PhD Student, Northeastern University</em></p>
+                    <p style="margin: 5px 0; font-size: 14px; color: #777;"><em>Previously: PhD, Northeastern University</em></p>
             <p style="margin: 5px 0; font-size: 14px; color: #777;">
                 Research Interests: AI Security, Hardware Security, Side-Channel Analysis
             </p>
@@ -40,7 +40,7 @@ layout: home
             In Chinese, 'Ruyi' (如意) conveys the meaning of 'fulfilling one's aspirations,' representing the pursuit of a prosperous future and steadfast resolve.
                 </p>
             <p style="margin: 10px 0; font-size: 15px;">
-                <a href="/prospective-students/" style="display:inline-block; background:#007bff; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none;">Prospective PhD Students: Apply / Contact</a>
+                <a href="/prospective-students/" style="display:inline-block; background:#007bff; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none;">Prospective Students: Apply / Contact</a>
             </p>
         </div>
     </div>
