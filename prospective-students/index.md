@@ -4,7 +4,6 @@ title: Prospective Students
 permalink: /prospective-students/
 ---
 
-## Prospective Students
 
 Thank you for your interest in joining my group. Please submit your information via the Google Form:
 
