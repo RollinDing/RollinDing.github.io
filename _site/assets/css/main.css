@@ -952,12 +952,14 @@ a.student-name {
   width: 280px;
   height: 280px;
   overflow: hidden;
+  position: relative;
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 #globe-wrap canvas {
   width: 280px !important;
   height: 280px !important;
+  max-width: 280px !important;
   display: block;
 }
 

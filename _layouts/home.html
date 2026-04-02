@@ -147,9 +147,11 @@
         <h2 class="section-heading">Visitors</h2>
         <div class="visitormap-wrap">
           <div id="globe-wrap">
-            <!-- Throttle RAF to ~12fps before globe loads, slowing rotation ~5x -->
             <script>
             (function(){
+              var SIZE = 280; // change this one number to resize the globe
+
+              // 1. Throttle RAF to slow rotation (~5x slower)
               var _raf = window.requestAnimationFrame;
               var _skip = 0;
               window.requestAnimationFrame = function(cb){
@@ -158,8 +160,30 @@
                   if (_skip === 0) { cb(t); } else { window.requestAnimationFrame(cb); }
                 });
               };
-              // Restore after globe finishes initializing
-              setTimeout(function(){ window.requestAnimationFrame = _raf; }, 4000);
+              setTimeout(function(){ window.requestAnimationFrame = _raf; }, 5000);
+
+              // 2. MutationObserver — fires the instant globe.js injects the canvas,
+              //    before the browser paints, so inline styles never win
+              function applySize(canvas) {
+                canvas.style.setProperty('width',  SIZE + 'px', 'important');
+                canvas.style.setProperty('height', SIZE + 'px', 'important');
+                canvas.setAttribute('width',  SIZE);
+                canvas.setAttribute('height', SIZE);
+              }
+
+              var obs = new MutationObserver(function(mutations) {
+                mutations.forEach(function(m) {
+                  m.addedNodes.forEach(function(node) {
+                    if (node.nodeName === 'CANVAS') { applySize(node); obs.disconnect(); }
+                    else if (node.querySelectorAll) {
+                      node.querySelectorAll('canvas').forEach(function(c){ applySize(c); obs.disconnect(); });
+                    }
+                  });
+                });
+              });
+
+              var wrap = document.getElementById('globe-wrap');
+              if (wrap) obs.observe(wrap, { childList: true, subtree: true });
             })();
             </script>
             <script type="text/javascript" id="clstr_globe"
