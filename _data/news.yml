@@ -1,0 +1,79 @@
+# News items for Ruyi Ding's academic website
+# Ordered newest first.
+# type: paper | award | position | service | student | grant
+
+- date: "Feb 2026"
+  text: "One Paper accepted to DAC 2026"
+  type: "paper"
+
+- date: "Dec 2026"
+  text: "Invited to serve as a TPC member for HOST 2026."
+  type: "service"
+
+- date: "Dec 2025"
+  text: "Invited to serve as a TPC member for DAC 2026."
+  type: "service"
+
+- date: "Aug 2025"
+  text: "Paper accepted to CCS 2025: MoEcho — side-channel attacks on Mixture-of-Experts LLMs."
+  type: "paper"
+
+- date: "May 2025"
+  text: "Invited to serve as a TPC member for ICCAD 2025."
+  type: "service"
+
+- date: "Apr 2025"
+  text: "Received the HOST 2025 Travel Grant."
+  type: "grant"
+
+- date: "Apr 2025"
+  text: "Selected as a DAC 2025 Young Fellow."
+  type: "award"
+
+- date: "Mar 2025"
+  text: "Received Northeastern University's 2025 Outstanding PhD Student Research Award."
+  type: "award"
+
+- date: "Feb 2025"
+  text: "Received Northeastern PhD Network Travel Award."
+  type: "grant"
+
+- date: "Feb 2025"
+  text: "Paper accepted to HOST 2025 (Best Paper Nomination): MACPruning — dynamic operation pruning to mitigate side-channel DNN model extraction."
+  type: "paper"
+
+- date: "Feb 2025"
+  text: "Paper accepted to DAC 2025: Graph in the Vault — protecting edge GNN inference with Trusted Execution Environment."
+  type: "paper"
+
+- date: "Jan 2025"
+  text: "Awarded the Internet Society Fellowship at NDSS 2025."
+  type: "award"
+
+- date: "Jan 2025"
+  text: "Joined Louisiana State University (LSU) as an Assistant Professor in the Division of Electrical and Computer Engineering."
+  type: "position"
+
+- date: "Jan 2025"
+  text: "Actively recruiting PhD students for Fall 2026 in AI security and hardware security — feel free to reach out at ruyiding@lsu.edu."
+  type: "student"
+
+- date: "Oct 2024"
+  text: "Paper accepted to NDSS 2025: Probe-Me-Not — protecting pre-trained encoders from malicious probing."
+  type: "paper"
+
+- date: "Sep 2024"
+  text: "Paper accepted to NeurIPS 2024: GraphCroc — cross-correlation autoencoder for graph structural reconstruction."
+  type: "paper"
+
+- date: "Jul 2024"
+  text: "Paper accepted to ECCV 2024: Non-transferable Pruning for Controlled Model Reuse."
+  type: "paper"
+
+- date: "Oct 2023"
+  text: "Paper accepted to ICCV 2023: VertexSerum — poisoning graph neural networks for link inference."
+  type: "paper"
+
+- date: "Mar 2023"
+  text: "EMShepherd received the Distinguished Paper Award at ASIACCS 2023."
+  type: "award"

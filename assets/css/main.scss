@@ -1,0 +1,882 @@
+---
+---
+
+// ============================================================
+// Color palette
+// ============================================================
+$primary:       #2e5090;
+$primary-light: #4a6fa5;
+$primary-dark:  #1e3a6e;
+$accent:        #c0392b;
+$accent-gold:   #d4a017;
+$text:          #2c3e50;
+$text-light:    #5d6d7e;
+$text-muted:    #8899aa;
+$bg:            #ffffff;
+$bg-light:      #f8f9fa;
+$bg-card:       #fdfdfe;
+$border:        #e9ecef;
+$border-light:  #f0f2f5;
+
+// ============================================================
+// Typography
+// ============================================================
+$font-body:    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-heading: Georgia, "Times New Roman", serif;
+$font-mono:    "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+// ============================================================
+// Layout
+// ============================================================
+$max-width:     960px;
+$header-height: 60px;
+
+// ============================================================
+// Reset & Base
+// ============================================================
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  color: $text;
+  background: $bg;
+  margin: 0;
+  padding: 0;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $primary-light;
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  color: $text;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+// ============================================================
+// Header / Navigation
+// ============================================================
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $bg;
+  border-bottom: 1px solid $border;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.header-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  font-family: $font-heading;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: $primary !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  &:hover {
+    color: $primary-dark !important;
+    text-decoration: none !important;
+  }
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  a.nav-link {
+    font-family: $font-body;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-light;
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: color 0.2s ease, background 0.2s ease;
+
+    &:hover,
+    &.active {
+      color: $primary;
+      background: rgba($primary, 0.06);
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile hamburger
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 4px;
+  background: none;
+  border: none;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $text;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+}
+
+// ============================================================
+// Page wrapper
+// ============================================================
+.page-wrapper {
+  min-height: calc(100vh - #{$header-height} - 60px);
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// ============================================================
+// Hero / Profile section
+// ============================================================
+.hero-section {
+  padding: 3rem 0 2.5rem;
+  background: $bg;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+
+  img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid $border;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+}
+
+.hero-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-name {
+  font-family: $font-heading;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $text;
+  margin: 0 0 0.15rem 0;
+  line-height: 1.2;
+}
+
+.hero-chinese {
+  font-size: 1rem;
+  color: $text-muted;
+  margin: 0 0 0.6rem 0;
+}
+
+.hero-position {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0 0 0.2rem 0;
+}
+
+.hero-dept,
+.hero-university {
+  font-size: 0.9rem;
+  color: $text-light;
+  margin: 0 0 0.15rem 0;
+}
+
+.hero-university a {
+  color: $text-light;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.hero-email {
+  font-size: 0.875rem;
+  color: $text-muted;
+  margin: 0.4rem 0 0.75rem;
+
+  a {
+    color: $text-muted;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.hero-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1rem;
+}
+
+.interest-tag {
+  display: inline-block;
+  background: rgba($primary, 0.08);
+  color: $primary;
+  border: 1px solid rgba($primary, 0.2);
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: $text-light;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid $border;
+    transition: all 0.2s ease;
+
+    img {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+      background: rgba($primary, 0.04);
+      text-decoration: none;
+    }
+  }
+}
+
+.hero-cta {
+  display: inline-block;
+  background: $primary;
+  color: $bg !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-1px);
+    text-decoration: none !important;
+    color: $bg !important;
+  }
+}
+
+// ============================================================
+// Section headings
+// ============================================================
+.section-heading {
+  font-family: $font-heading;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $text;
+  margin: 0 0 1.25rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $border;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 40px;
+    height: 2px;
+    background: $primary;
+  }
+}
+
+// ============================================================
+// About / Bio section
+// ============================================================
+.about-section {
+  padding: 2rem 0;
+  border-top: 1px solid $border-light;
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: $text-light;
+    margin-bottom: 0.75rem;
+  }
+
+  .highlight-notice {
+    background: rgba($primary, 0.05);
+    border-left: 3px solid $primary;
+    padding: 0.75rem 1rem;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: $text;
+    margin-top: 0.75rem;
+
+    strong {
+      color: $accent;
+    }
+  }
+}
+
+.read-more-toggle {
+  color: $primary;
+  cursor: pointer;
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+// ============================================================
+// News section
+// ============================================================
+.news-section {
+  padding: 2rem 0;
+  border-top: 1px solid $border-light;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid $border-light;
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news-date {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: $primary;
+  font-size: 0.8rem;
+  min-width: 4.5rem;
+  padding-top: 0.1rem;
+  font-family: $font-mono;
+}
+
+.news-text {
+  color: $text-light;
+  flex: 1;
+
+  strong {
+    color: $text;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+.news-hidden {
+  display: none;
+}
+
+.news-toggle-btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: $primary;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background: none;
+  border: 1px solid $border;
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba($primary, 0.06);
+    border-color: $primary;
+  }
+}
+
+// ============================================================
+// Publications page
+// ============================================================
+.publications-page {
+  padding: 2.5rem 0;
+}
+
+.year-group {
+  margin-bottom: 2.5rem;
+}
+
+.year-label {
+  font-family: $font-heading;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $text;
+  border-bottom: 2px solid $border;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 32px;
+    height: 2px;
+    background: $primary;
+  }
+}
+
+.pub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pub-card {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-left: 4px solid $border;
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.25rem;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  }
+
+  &.pub-featured {
+    border-left-color: $primary;
+    background: rgba($primary, 0.02);
+  }
+
+  &.pub-best-paper {
+    border-left-color: $accent-gold;
+    background: rgba($accent-gold, 0.03);
+  }
+}
+
+.pub-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $text;
+  line-height: 1.45;
+  margin-bottom: 0.4rem;
+}
+
+.pub-authors {
+  font-size: 0.85rem;
+  color: $text-light;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.pub-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.pub-venue-badge {
+  display: inline-block;
+  background: $primary;
+  color: $bg;
+  padding: 0.15rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+
+  .pub-featured & {
+    background: $primary-dark;
+  }
+
+  .pub-best-paper & {
+    background: darken($accent-gold, 10%);
+    color: #fff;
+  }
+}
+
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.15rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  &.award-best-paper {
+    background: rgba($accent-gold, 0.15);
+    color: darken($accent-gold, 20%);
+    border: 1px solid rgba($accent-gold, 0.4);
+  }
+
+  &.award-nomination {
+    background: rgba($text-muted, 0.1);
+    color: $text-muted;
+    border: 1px solid rgba($text-muted, 0.3);
+  }
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.pub-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border: 1px solid $border;
+  color: $text-light;
+  text-decoration: none;
+  background: $bg;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $primary;
+    border-color: $primary;
+    background: rgba($primary, 0.04);
+    text-decoration: none;
+  }
+
+  &.link-github {
+    &:hover {
+      color: #333;
+      border-color: #555;
+    }
+  }
+}
+
+// ============================================================
+// General page layout
+// ============================================================
+.page-content {
+  padding: 2.5rem 0;
+}
+
+.page-title {
+  font-family: $font-heading;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: $text;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid $border;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 48px;
+    height: 2px;
+    background: $primary;
+  }
+}
+
+// Research page
+.research-area {
+  background: $bg-card;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+
+  h3 {
+    font-family: $font-heading;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $primary;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-light;
+    margin: 0;
+    line-height: 1.7;
+  }
+}
+
+// Students page
+.students-form-cta {
+  background: rgba($primary, 0.04);
+  border: 1px solid rgba($primary, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: $text-light;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: $primary;
+    color: $bg !important;
+    padding: 0.65rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none !important;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: $primary-dark;
+      text-decoration: none !important;
+    }
+  }
+}
+
+// CV page
+.cv-frame-wrapper {
+  width: 100%;
+  border: 1px solid $border;
+  border-radius: 6px;
+  overflow: hidden;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    border: none;
+  }
+}
+
+// ============================================================
+// Footer
+// ============================================================
+.site-footer {
+  background: $bg-light;
+  border-top: 1px solid $border;
+  padding: 1.25rem 0;
+}
+
+.footer-inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $text-light;
+}
+
+.footer-credit {
+  font-size: 0.8rem;
+  color: $text-muted;
+}
+
+// ============================================================
+// Social links include
+// ============================================================
+.social-links-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $border;
+    color: $text-light;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    img {
+      width: 16px;
+      height: 16px;
+    }
+
+    &:hover {
+      border-color: $primary;
+      color: $primary;
+      background: rgba($primary, 0.06);
+    }
+  }
+}
+
+// ============================================================
+// Responsive
+// ============================================================
+@media (max-width: 700px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-photo img {
+    width: 120px;
+    height: 145px;
+  }
+
+  .hero-name {
+    font-size: 1.6rem;
+  }
+
+  .hero-interests,
+  .hero-social {
+    justify-content: center;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    background: $bg;
+    border-bottom: 1px solid $border;
+    padding: 0.75rem 1.5rem;
+    gap: 0.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+    &.is-open {
+      display: flex;
+    }
+
+    a.nav-link {
+      padding: 0.5rem 0.5rem;
+      width: 100%;
+    }
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pub-meta {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-section {
+    padding: 2rem 0 1.5rem;
+  }
+
+  .page-content {
+    padding: 1.5rem 0;
+  }
+}

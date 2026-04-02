@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.person.name }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  {%- include header.html -%}
+
+  <div class="page-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  {%- include footer.html -%}
+
+  <script>
+    // Mobile nav toggle
+    var navToggle = document.getElementById('navToggle');
+    var siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('is-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

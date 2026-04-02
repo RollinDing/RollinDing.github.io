@@ -1,0 +1,142 @@
+# Publications data file for Ruyi Ding's academic website
+# Ordered newest first within each year.
+# featured: true for top-tier venues: CCS, NDSS, ICCAD, DAC, NeurIPS, ECCV, ICCV, ASIACCS, HOST, AISTATS
+# award_type: "best_paper" | "nomination"  (omit if no award)
+
+- title: "MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs"
+  authors: "Ruyi Ding*, Tianhong Xu*, Xinyi Shen, Aidong Adam Ding, Yunsi Fei"
+  venue: "CCS 2025"
+  year: 2025
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2508.15036"
+      type: "pdf"
+
+- title: "Graph in the Vault: Protecting Edge GNN Inference with Trusted Execution Environment"
+  authors: "Ruyi Ding*, Tianhong Xu*, Aidong Adam Ding, Yunsi Fei"
+  venue: "DAC 2025"
+  year: 2025
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2502.15012"
+      type: "pdf"
+
+- title: "MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction"
+  authors: "Ruyi Ding, Cheng Gongye, Davis Ranney, Aidong Adam Ding, Yunsi Fei"
+  venue: "HOST 2025"
+  year: 2025
+  featured: true
+  award: "Best Paper Nomination"
+  award_type: "nomination"
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2502.15020"
+      type: "pdf"
+
+- title: "Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing"
+  authors: "Ruyi Ding, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei"
+  venue: "NDSS 2025"
+  year: 2025
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2411.12508"
+      type: "pdf"
+    - label: "Code"
+      url: "https://github.com/RollinDing/EncoderLock"
+      type: "github"
+
+- title: "GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction"
+  authors: "Shijin Duan*, Ruyi Ding*, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu"
+  venue: "NeurIPS 2024"
+  year: 2024
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2410.03396"
+      type: "pdf"
+
+- title: "Non-transferable Pruning for Controlled Model Reuse"
+  authors: "Ruyi Ding, Lili Su, Aidong Adam Ding, Yunsi Fei"
+  venue: "ECCV 2024"
+  year: 2024
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2410.08015"
+      type: "pdf"
+    - label: "Code"
+      url: "https://github.com/RollinDing/DNN-NTL-Pruning"
+      type: "github"
+
+- title: "VertexSerum: Poisoning Graph Neural Networks for Link Inference"
+  authors: "Ruyi Ding*, Shijin Duan*, Xiaolin Xu, Yunsi Fei"
+  venue: "ICCV 2023"
+  year: 2023
+  featured: true
+  links:
+    - label: "PDF"
+      url: "https://openaccess.thecvf.com/content/ICCV2023/papers/Ding_VertexSerum_Poisoning_Graph_Neural_Networks_for_Link_Inference_ICCV_2023_paper.pdf"
+      type: "pdf"
+    - label: "Code"
+      url: "https://github.com/RollinDing/VertexSerum"
+      type: "github"
+
+- title: "EMShepherd: Detecting Adversarial Samples via Side-channel Leakage"
+  authors: "Ruyi Ding, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei"
+  venue: "ASIACCS 2023"
+  year: 2023
+  featured: true
+  award: "Distinguished Paper Award"
+  award_type: "best_paper"
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/pdf/2303.15571"
+      type: "pdf"
+    - label: "Code"
+      url: "https://github.com/RollinDing/em-adversarial-detection"
+      type: "github"
+
+- title: "A cross-platform cache timing attack framework via deep learning"
+  authors: "Ruyi Ding, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, Aidong Adam Ding"
+  venue: "DATE 2022"
+  year: 2022
+  featured: false
+  award: "Best Paper Nomination"
+  award_type: "nomination"
+  links:
+    - label: "PDF"
+      url: "https://par.nsf.gov/servlets/purl/10351468"
+      type: "pdf"
+
+- title: "Ran$Net: An Anti-Ransomware Methodology based on Cache Monitoring and Deep Learning"
+  authors: "Xiang Zhang, Ziyue Zhang, Ruyi Ding, Cheng Gongye, Aidong Adam Ding, Yunsi Fei"
+  venue: "GLSVLSI 2022"
+  year: 2022
+  featured: false
+
+- title: "Neural Architecture Search for Adversarial Robustness via Learnable Pruning"
+  authors: "Yize Li, Pu Zhao, Ruyi Ding, Tong Zhou, Yunsi Fei, Xiaolin Xu, Xue Lin"
+  venue: "Frontiers in High Performance Computing"
+  year: 2021
+  featured: false
+
+- title: "Spatio-temporal point processes with attention for traffic congestion event modeling"
+  authors: "Shixiang Zhu, Ruyi Ding, Minghe Zhang, Pascal Van Hentenryck, Yao Xie"
+  venue: "IEEE Transactions on Intelligent Transportation Systems"
+  year: 2021
+  featured: false
+
+- title: "Deep Fourier Kernel for Self-Attentive Point Processes"
+  authors: "Shixiang Zhu, Minghe Zhang, Ruyi Ding, Yao Xie"
+  venue: "AISTATS 2021"
+  year: 2021
+  featured: true
+
+- title: "Persistent fault analysis on block ciphers"
+  authors: "Fan Zhang, Xiaoxuan Lou, Xinjie Zhao, Shivam Bhasin, Wei He, Ruyi Ding, Samiya Qureshi, Kui Ren"
+  venue: "IACR Transactions on Cryptographic Hardware and Embedded Systems"
+  year: 2018
+  featured: false

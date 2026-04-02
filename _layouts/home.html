@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.person.name }} | {{ site.person.title }}, {{ site.person.university }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  {%- include header.html -%}
+
+  <div class="page-wrapper">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-photo">
+            <img src="{{ site.person.photo | relative_url }}" alt="{{ site.person.name }}">
+          </div>
+
+          <div class="hero-info">
+            <h1 class="hero-name">{{ site.person.name }}</h1>
+            {% if site.person.chinese_name %}
+            <p class="hero-chinese">{{ site.person.chinese_name }}</p>
+            {% endif %}
+            <p class="hero-position">{{ site.person.title }}</p>
+            <p class="hero-dept">{{ site.person.department }}</p>
+            <p class="hero-university">
+              <a href="{{ site.person.university_url }}" target="_blank" rel="noopener">{{ site.person.university }}</a>
+            </p>
+            <p class="hero-email">
+              <a href="mailto:{{ site.person.email }}">{{ site.person.email }}</a>
+            </p>
+
+            {% if site.person.research_interests %}
+            <div class="hero-interests">
+              {% for interest in site.person.research_interests %}
+              <span class="interest-tag">{{ interest }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="hero-social">
+              {% if site.github_url %}
+              <a href="{{ site.github_url }}" target="_blank" rel="noopener" title="GitHub">
+                <img src="{{ '/assets/images/github.svg' | relative_url }}" alt="GitHub">
+                GitHub
+              </a>
+              {% endif %}
+              {% if site.scholar_url %}
+              <a href="{{ site.scholar_url }}" target="_blank" rel="noopener" title="Google Scholar">
+                <img src="{{ '/assets/images/scholar.svg' | relative_url }}" alt="Scholar">
+                Scholar
+              </a>
+              {% endif %}
+              {% if site.linkedin_url %}
+              <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener" title="LinkedIn">
+                <img src="{{ '/assets/images/linkedin.svg' | relative_url }}" alt="LinkedIn">
+                LinkedIn
+              </a>
+              {% endif %}
+            </div>
+
+            <a href="{{ '/students/' | relative_url }}" class="hero-cta">Prospective Students</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <h2 class="section-heading">About</h2>
+        <div id="about-summary">
+          <p>
+            I am an Assistant Professor at the Division of Electrical and Computer Engineering at Louisiana State University.
+            My research focuses on AI security and hardware security, specializing in neural network robustness,
+            privacy preservation, and side-channel analysis.
+          </p>
+          <div class="highlight-notice">
+            <strong>I am actively looking for Ph.D. students for Spring 2026 and Fall 2026.</strong>
+            Feel free to reach out if you are interested in AI security and hardware security!
+          </div>
+          <p style="margin-top:0.75rem;">
+            <button class="read-more-toggle" id="readMoreBtn" onclick="toggleAbout()">Read more...</button>
+          </p>
+        </div>
+        <div id="about-full" style="display:none;">
+          <p>
+            My work sits at the intersection of machine learning and hardware security, with three primary thrusts:
+          </p>
+          <ul>
+            <li>Developing secure and privacy-preserving ML systems</li>
+            <li>Detecting and mitigating hardware vulnerabilities through side-channel analysis</li>
+            <li>ML-hardware co-design for security applications</li>
+          </ul>
+          <p>
+            These efforts advance two critical domains: <strong>Responsible AI</strong> (ensuring AI systems are
+            secure and ethical) and <strong>Hardware Security</strong> (building trustworthy computing foundations).
+            My approach emphasizes both theoretical analysis of modern architectures and practical system implementations.
+          </p>
+          <div class="highlight-notice">
+            <strong>I am actively looking for Ph.D. students for Spring 2026 and Fall 2026.</strong>
+            Feel free to reach out if you are interested in AI security and hardware security!
+          </div>
+          <p style="margin-top:0.75rem;">
+            <button class="read-more-toggle" onclick="toggleAbout()">Show less...</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+      <div class="container">
+        <h2 class="section-heading">News</h2>
+        {% if site.data.news %}
+        <ul class="news-list">
+          {% for item in site.data.news %}
+          <li class="news-item{% if forloop.index > 5 %} news-hidden{% endif %}">
+            <span class="news-date">{{ item.date }}</span>
+            <span class="news-text">{{ item.text }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% assign news_count = site.data.news | size %}
+        {% if news_count > 5 %}
+        <button class="news-toggle-btn" id="newsToggleBtn" onclick="toggleNews()">Show all {{ news_count }} news items</button>
+        {% endif %}
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- Page content (JSON-LD etc from front matter) -->
+    {{ content }}
+
+  </div>
+
+  {%- include footer.html -%}
+
+  <script>
+    function toggleAbout() {
+      var summary = document.getElementById('about-summary');
+      var full = document.getElementById('about-full');
+      if (full.style.display === 'none') {
+        summary.style.display = 'none';
+        full.style.display = 'block';
+      } else {
+        full.style.display = 'none';
+        summary.style.display = 'block';
+      }
+    }
+
+    function toggleNews() {
+      var hiddenItems = document.querySelectorAll('.news-hidden');
+      var btn = document.getElementById('newsToggleBtn');
+      var allVisible = hiddenItems.length === 0 || hiddenItems[0].style.display !== 'none';
+
+      // Re-query since classList state changes
+      var newsItems = document.querySelectorAll('.news-item');
+      var showing = false;
+      newsItems.forEach(function(item) {
+        if (item.classList.contains('news-hidden')) {
+          if (item.style.display === '' || item.style.display === 'none') {
+            item.style.display = 'flex';
+            showing = true;
+          }
+        }
+      });
+      if (showing) {
+        btn.textContent = 'Show fewer news items';
+      } else {
+        newsItems.forEach(function(item, idx) {
+          if (item.classList.contains('news-hidden')) {
+            item.style.display = 'none';
+          }
+        });
+        btn.textContent = btn.getAttribute('data-original') || 'Show all news items';
+      }
+    }
+
+    // Mobile nav toggle
+    var navToggle = document.getElementById('navToggle');
+    var siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('is-open');
+      });
+    }
+  </script>
+
+</body>
+</html>

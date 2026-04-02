@@ -1,0 +1,38 @@
+# Research areas data file for Ruyi Ding's academic website
+# Three primary research thrusts derived from the bio.
+
+- area: "AI Security & Privacy"
+  description: >
+    Developing secure and privacy-preserving machine learning systems, including
+    protecting pre-trained encoders and models from unauthorized reuse and malicious
+    probing, defending against adversarial and poisoning attacks on graph neural
+    networks, and ensuring responsible deployment of AI at scale.
+  representative_papers:
+    - "Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing"
+    - "Non-transferable Pruning for Controlled Model Reuse"
+    - "VertexSerum: Poisoning Graph Neural Networks for Link Inference"
+    - "GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction"
+
+- area: "Hardware Security & Side-Channel Analysis"
+  description: >
+    Exploiting and mitigating hardware-level vulnerabilities through electromagnetic,
+    power, and cache side-channel analysis — spanning DNN model extraction attacks,
+    adversarial sample detection on FPGA accelerators, ransomware detection, and
+    fault analysis on cryptographic hardware.
+  representative_papers:
+    - "EMShepherd: Detecting Adversarial Samples via Side-channel Leakage"
+    - "MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs"
+    - "MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction"
+    - "A cross-platform cache timing attack framework via deep learning"
+    - "Persistent fault analysis on block ciphers"
+
+- area: "ML-Hardware Co-Design for Security"
+  description: >
+    Bridging machine learning and hardware design to build trustworthy computing
+    systems, including leveraging Trusted Execution Environments (TEE) for secure
+    graph neural network inference on edge devices, and co-designing neural network
+    architectures with hardware-aware sparsity and security properties.
+  representative_papers:
+    - "Graph in the Vault: Protecting Edge GNN Inference with Trusted Execution Environment"
+    - "MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction"
+    - "Neural Architecture Search for Adversarial Robustness via Learnable Pruning"

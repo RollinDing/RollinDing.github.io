@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications | {{ site.person.name }}</title>
+  <meta name="description" content="Publications by {{ site.person.name }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  {%- include header.html -%}
+
+  <div class="page-wrapper">
+    <div class="publications-page">
+      <div class="container">
+        <h1 class="page-title">Publications</h1>
+
+        {{ content }}
+
+        {% assign pubs = site.data.publications | sort: "year" | reverse %}
+        {% assign years = pubs | map: "year" | uniq %}
+
+        {% for year in years %}
+        <div class="year-group">
+          <h2 class="year-label">{{ year }}</h2>
+          <ul class="pub-list">
+            {% for pub in pubs %}
+            {% if pub.year == year %}
+            <li class="pub-card{% if pub.featured %} pub-featured{% endif %}{% if pub.award_type == 'best_paper' %} pub-best-paper{% endif %}">
+              <div class="pub-title">{{ pub.title }}</div>
+              <div class="pub-authors">{{ pub.authors }}</div>
+              <div class="pub-meta">
+                <span class="pub-venue-badge">{{ pub.venue }}</span>
+                {% if pub.award %}
+                <span class="award-badge award-{{ pub.award_type }}">
+                  {% if pub.award_type == 'best_paper' %}&#9733;{% else %}&#9670;{% endif %}
+                  {{ pub.award }}
+                </span>
+                {% endif %}
+              </div>
+              {% if pub.links %}
+              <div class="pub-links">
+                {% for link in pub.links %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener"
+                   class="pub-link-btn{% if link.icon == 'github' %} link-github{% endif %}">
+                  {% if link.icon == 'pdf' %}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/>
+                  </svg>
+                  {% elsif link.icon == 'github' %}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                  </svg>
+                  {% elsif link.icon == 'arxiv' %}
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm-1 4v6l4 4 1.41-1.41L13 11.17V6h-2z"/>
+                  </svg>
+                  {% endif %}
+                  {{ link.label }}
+                </a>
+                {% endfor %}
+              </div>
+              {% endif %}
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+  {%- include footer.html -%}
+
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('is-open');
+      });
+    }
+  </script>
+
+</body>
+</html>
