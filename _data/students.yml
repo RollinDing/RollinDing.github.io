@@ -1,0 +1,27 @@
+# Current and alumni students
+# To add a student, append to the "current" or "alumni" list.
+# photo: path relative to /assets/images/, or leave empty ""
+
+current:
+  - name: "Huangkang Lin"
+    degree: "PhD Candidate @LSU"
+    since: "2025"
+    research: "MoE Security"
+    photo: ""
+    website: ""
+    note: "Coadvise with Prof. Minxuan Sun"
+  - name: "Dushan Herath"
+    degree: "PhD Candidate @LSU"
+    since: "2026"
+    research: "AI Security"
+    photo: ""
+    website: ""
+    note: "Coadvise with Prof. Xiangwei Zhou"
+  - name: "Tiancheng Zheng"
+    degree: "MS @UCLA"
+    since: "2025"
+    research: "AI Security"
+    photo: ""
+    website: ""
+    note: "Will join Northeastern University for PhD in Fall 2026"
+alumni: []

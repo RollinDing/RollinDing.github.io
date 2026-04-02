@@ -6,6 +6,7 @@
   <title>Publications | {{ site.person.name }}</title>
   <meta name="description" content="Publications by {{ site.person.name }}">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {%- include theme_init.html -%}
   {% feed_meta %}
   {% seo %}
 </head>
@@ -83,6 +84,13 @@
     if (navToggle && siteNav) {
       navToggle.addEventListener('click', function() {
         siteNav.classList.toggle('is-open');
+      });
+    }
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
       });
     }
   </script>

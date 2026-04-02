@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching | {{ site.person.name }}</title>
+  <meta name="description" content="Courses taught by {{ site.person.name }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {%- include theme_init.html -%}
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  {%- include header.html -%}
+
+  <div class="page-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <h1 class="page-title">Teaching</h1>
+
+        {% assign undergrad = site.data.teaching | where: "level", "undergraduate" %}
+        {% assign grad = site.data.teaching | where: "level", "graduate" %}
+
+        {% if grad.size > 0 %}
+        <h2 class="teaching-subheading">Graduate Courses</h2>
+        <div class="course-list">
+          {% for course in grad %}
+          <div class="course-card">
+            <div class="course-header">
+              <span class="course-code">{{ course.code }}</span>
+              <span class="course-title">{{ course.title }}</span>
+              <span class="course-semester">{{ course.semester }}</span>
+            </div>
+            {% if course.description %}
+            <p class="course-desc">{{ course.description }}</p>
+            {% endif %}
+            {% if course.syllabus %}
+            <a href="{{ course.syllabus }}" class="course-link" target="_blank" rel="noopener">Syllabus</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if undergrad.size > 0 %}
+        <h2 class="teaching-subheading">Undergraduate Courses</h2>
+        <div class="course-list">
+          {% for course in undergrad %}
+          <div class="course-card">
+            <div class="course-header">
+              <span class="course-code">{{ course.code }}</span>
+              <span class="course-title">{{ course.title }}</span>
+              <span class="course-semester">{{ course.semester }}</span>
+            </div>
+            {% if course.description %}
+            <p class="course-desc">{{ course.description }}</p>
+            {% endif %}
+            {% if course.syllabus %}
+            <a href="{{ course.syllabus }}" class="course-link" target="_blank" rel="noopener">Syllabus</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  {%- include footer.html -%}
+
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('is-open');
+      });
+    }
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    }
+  </script>
+
+</body>
+</html>

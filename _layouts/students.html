@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students | {{ site.person.name }}</title>
+  <meta name="description" content="Students advised by {{ site.person.name }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {%- include theme_init.html -%}
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  {%- include header.html -%}
+
+  <div class="page-wrapper">
+    <div class="page-content">
+      <div class="container">
+        <h1 class="page-title">Students</h1>
+
+        <!-- Current Students -->
+        {% assign current = site.data.students.current | where_exp: "s", "s.name != ''" %}
+        {% if current.size > 0 %}
+        <h2 class="teaching-subheading">Current Students</h2>
+        <div class="student-list">
+          {% for student in current %}
+          <div class="student-card">
+            {% if student.photo != "" and student.photo != nil %}
+            <img src="{{ '/assets/images/' | append: student.photo | relative_url }}" alt="{{ student.name }}" class="student-photo">
+            {% else %}
+            <div class="student-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+            </div>
+            {% endif %}
+            <div class="student-info">
+              {% if student.website != "" and student.website != nil %}
+              <a href="{{ student.website }}" class="student-name" target="_blank" rel="noopener">{{ student.name }}</a>
+              {% else %}
+              <span class="student-name">{{ student.name }}</span>
+              {% endif %}
+              <span class="student-degree">{{ student.degree }} Student · Since {{ student.since }}</span>
+              <span class="student-research">{{ student.research }}</span>
+              {% if student.note %}<span class="student-note">{{ student.note }}</span>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <h2 class="teaching-subheading">Current Students</h2>
+        <p class="students-placeholder">Student information coming soon. <a href="mailto:{{ site.person.email }}">Contact me</a> if you are interested in joining.</p>
+        {% endif %}
+
+        <!-- Alumni -->
+        {% assign alumni = site.data.students.alumni %}
+        {% if alumni.size > 0 %}
+        <h2 class="teaching-subheading">Alumni</h2>
+        <div class="student-list">
+          {% for student in alumni %}
+          <div class="student-card">
+            <div class="student-info">
+              {% if student.website != "" and student.website != nil %}
+              <a href="{{ student.website }}" class="student-name" target="_blank" rel="noopener">{{ student.name }}</a>
+              {% else %}
+              <span class="student-name">{{ student.name }}</span>
+              {% endif %}
+              <span class="student-degree">{{ student.degree }} · {{ student.graduated }}</span>
+              {% if student.placement %}<span class="student-research">Now at: {{ student.placement }}</span>{% endif %}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Prospective Students -->
+        <h2 class="teaching-subheading" style="margin-top: 2.5rem;">Prospective Students</h2>
+        <div class="students-form-cta">
+          <p>
+            I am actively recruiting <strong>PhD students</strong> for <strong>Fall 2026</strong> and <strong>Spring 2027</strong>
+            with interests in LLM Security, AI Security, Hardware Security, and Side-Channel Analysis.
+          </p>
+          <p style="margin-bottom:0.5rem;"><strong>What I look for:</strong></p>
+          <ul style="text-align:left; display:inline-block; margin-bottom:1rem;">
+            <li>Strong mathematical background (linear algebra, probability, statistics)</li>
+            <li>Programming skills (Python, C/C++)</li>
+            <li>Passion for research and security</li>
+          </ul>
+          <p><strong>Fully-funded positions</strong> with competitive stipend and tuition waiver are available.</p>
+          <a href="https://forms.gle/qYN2X1VhPoQbRTHv9" class="cta-btn" target="_blank" rel="noopener">Apply via Google Form</a>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#888;">
+            Or email your CV and research statement to
+            <a href="mailto:{{ site.person.email }}">{{ site.person.email }}</a>
+          </p>
+        </div>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+  {%- include footer.html -%}
+
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var siteNav = document.getElementById('siteNav');
+    if (navToggle && siteNav) {
+      navToggle.addEventListener('click', function() {
+        siteNav.classList.toggle('is-open');
+      });
+    }
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      });
+    }
+  </script>
+
+</body>
+</html>

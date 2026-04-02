@@ -1,0 +1,14 @@
+# Teaching data — add new courses here
+# level: undergraduate | graduate
+
+- code: "EE4745"
+  title: "Neural Computing"
+  semester: "Fall 2025"
+  level: undergraduate
+  description: "Introduction to neural networks and deep learning, covering architectures, training methods, and applications in engineering systems."
+
+- code: "EE7700"
+  title: "Special Topics in Electrical Engineering"
+  semester: "Spring 2026"
+  level: graduate
+  description: "Graduate-level special topics course. Contact instructor for details."
