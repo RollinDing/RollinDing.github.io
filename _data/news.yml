@@ -3,10 +3,10 @@
 # type: paper | award | position | service | student | grant
 
 - date: "Feb 2026"
-  text: "One Paper accepted to DAC 2026"
+  text: "One Paper accepted to DAC 2026。"
   type: "paper"
 
-- date: "Dec 2026"
+- date: "Dec 2025"
   text: "Invited to serve as a TPC member for HOST 2026."
   type: "service"
 

@@ -937,6 +937,30 @@ a.student-name {
   padding: 1rem 0;
 }
 
+.visitormap-section {
+  padding: 2rem 0;
+  border-top: 1px solid #f0f2f5;
+}
+
+.visitormap-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#globe-wrap {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+#globe-wrap canvas {
+  width: 280px !important;
+  height: 280px !important;
+  display: block;
+}
+
 html.dark body {
   background: #0d1117;
   color: #c9d1d9;

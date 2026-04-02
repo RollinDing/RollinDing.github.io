@@ -85,10 +85,9 @@
             My research focuses on AI security and hardware security, specializing in neural network robustness,
             privacy preservation, and side-channel analysis.
           </p>
-          <div class="highlight-notice">
-            <strong>I am actively looking for Ph.D. students for Spring 2026 and Fall 2026.</strong>
-            Feel free to reach out if you are interested in AI security and hardware security!
-          </div>
+          {% if site.recruiting_active %}
+          <div class="highlight-notice">{{ site.recruiting_notice }}</div>
+          {% endif %}
           <p style="margin-top:0.75rem;">
             <button class="read-more-toggle" id="readMoreBtn" onclick="toggleAbout()">Read more...</button>
           </p>
@@ -107,10 +106,9 @@
             secure and ethical) and <strong>Hardware Security</strong> (building trustworthy computing foundations).
             My approach emphasizes both theoretical analysis of modern architectures and practical system implementations.
           </p>
-          <div class="highlight-notice">
-            <strong>I am actively looking for Ph.D. students for Spring 2026 and Fall 2026.</strong>
-            Feel free to reach out if you are interested in AI security and hardware security!
-          </div>
+          {% if site.recruiting_active %}
+          <div class="highlight-notice">{{ site.recruiting_notice }}</div>
+          {% endif %}
           <p style="margin-top:0.75rem;">
             <button class="read-more-toggle" onclick="toggleAbout()">Show less...</button>
           </p>
@@ -141,6 +139,37 @@
 
     <!-- Page content (JSON-LD etc from front matter) -->
     {{ content }}
+
+    <!-- Visitor Map -->
+    {% if site.clustrmaps_id and site.clustrmaps_id != "" %}
+    <section class="visitormap-section">
+      <div class="container">
+        <h2 class="section-heading">Visitors</h2>
+        <div class="visitormap-wrap">
+          <div id="globe-wrap">
+            <!-- Throttle RAF to ~12fps before globe loads, slowing rotation ~5x -->
+            <script>
+            (function(){
+              var _raf = window.requestAnimationFrame;
+              var _skip = 0;
+              window.requestAnimationFrame = function(cb){
+                return _raf.call(window, function(t){
+                  _skip = (_skip + 1) % 5;
+                  if (_skip === 0) { cb(t); } else { window.requestAnimationFrame(cb); }
+                });
+              };
+              // Restore after globe finishes initializing
+              setTimeout(function(){ window.requestAnimationFrame = _raf; }, 4000);
+            })();
+            </script>
+            <script type="text/javascript" id="clstr_globe"
+              src="//clustrmaps.com/globe.js?d={{ site.clustrmaps_id }}">
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endif %}
 
   </div>
 

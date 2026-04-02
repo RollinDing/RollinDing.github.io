@@ -28,6 +28,15 @@ person:
     - Hardware Security
     - Side-Channel Analysis
 
+# Recruiting notice — shown as highlighted banner on homepage
+# Set recruiting_active: false to hide it
+recruiting_active: true
+recruiting_notice: "I am actively looking for Ph.D. students for <strong>Fall 2026</strong> and <strong>Spring 2027</strong>. Feel free to reach out if you are interested in AI security and hardware security!"
+
+# Visitor map — get your ID from https://clustrmaps.com (register your site URL)
+# Leave empty to hide the map
+clustrmaps_id: "4lQaJAc9dv2iOdEexgbHM6R4udam78uNUl4o6sh7yNo"
+
 # Theme settings
 accent_color: "#2e5090"
 

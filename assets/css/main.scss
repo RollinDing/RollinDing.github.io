@@ -1077,6 +1077,35 @@ a.student-name {
 }
 
 // ============================================================
+// Visitor map section
+// ============================================================
+.visitormap-section {
+  padding: 2rem 0;
+  border-top: 1px solid $border-light;
+}
+
+.visitormap-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#globe-wrap {
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+
+  // ClustrMaps injects a canvas — constrain it
+  canvas {
+    width: 280px !important;
+    height: 280px !important;
+    display: block;
+  }
+}
+
+// ============================================================
 // Dark mode
 // ============================================================
 html.dark {
