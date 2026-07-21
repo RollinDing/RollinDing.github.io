@@ -2,6 +2,14 @@
 # Ordered newest first.
 # type: paper | award | position | service | student | grant
 
+- date: "Jul 2026"
+  text: "One paper accepted to CCS 2026. Congratulations to Tianhong!"
+  type: "paper"
+
+- date: "Jun 2026"
+  text: "One paper accepted to ECCV 2026. Congratulations to Xiaocheng!"
+  type: "paper"
+
 - date: "Feb 2026"
   text: "One Paper accepted to DAC 2026。"
   type: "paper"
@@ -55,7 +63,7 @@
   type: "position"
 
 - date: "Jan 2025"
-  text: "Actively recruiting PhD students for Fall 2026 in AI security and hardware security — feel free to reach out at ruyiding@lsu.edu."
+  text: "Actively recruiting PhD students for Fall 2027 in AI security and hardware security — feel free to reach out at ruyiding@lsu.edu."
   type: "student"
 
 - date: "Oct 2024"
