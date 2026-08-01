@@ -6,11 +6,11 @@ permalink: /research/
 
 ## Research Interests
 
-My research sits at the intersection of **machine learning** and **hardware security**, with three primary thrusts:
+My research centers on **Secure AI Infra** — securing modern AI systems across the entire stack, from silicon and accelerators to foundation models and autonomous agents — with three primary thrusts:
 
-1. **Secure & Privacy-Preserving ML** — Protecting ML models from extraction, probing, and misuse
-2. **Side-Channel Analysis** — Detecting adversarial attacks and hardware vulnerabilities via EM/power signals
-3. **ML-Hardware Co-Design** — Building trustworthy computing foundations through joint design
+1. **Model & Data Security** — Protecting ML models from extraction, probing, and misuse; defending against adversarial, poisoning, and backdoor attacks
+2. **Hardware Security & Confidential Computing** — Side-channel analysis (EM, power, cache) of AI systems and TEE-based protection for secure model inference
+3. **Agentic AI Security** — Securing LLM and Mixture-of-Experts deployments and agentic AI platforms (e.g., vibe coding, openclaw), including side-channel threats to inference infrastructure
 
-These efforts advance two critical domains: **Responsible AI** (ensuring AI systems are secure and ethical) and **Hardware Security** (building trustworthy computing foundations).
+These efforts advance one mission: **building trustworthy AI infrastructure** — from silicon and accelerators to foundation models and autonomous agents.
 Now I am actively working on security of agentic AI, including vibe coding, openclaw, etc.

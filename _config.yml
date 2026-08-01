@@ -24,14 +24,15 @@ person:
   email: ruyiding@lsu.edu
   photo: /assets/images/photo.jpeg
   research_interests:
-    - AI Security
-    - Hardware Security
-    - Side-Channel Analysis
+    - Secure AI Infra
+    - Model & Data Security
+    - Side-Channel & Confidential Computing
+    - Agentic AI Security
 
 # Recruiting notice — shown as highlighted banner on homepage
 # Set recruiting_active: false to hide it
 recruiting_active: true
-recruiting_notice: "I am actively looking for Ph.D. students for <strong>Fall 2027</strong>. Feel free to reach out if you are interested in AI security and hardware security!"
+recruiting_notice: "I am actively looking for Ph.D. students for <strong>Fall 2027</strong>. Feel free to reach out if you are interested in <strong>Secure AI Infra</strong> — model & data security, side-channel & confidential computing, and agentic AI security!"
 
 # Visitor map — get your ID from https://clustrmaps.com (register your site URL)
 # Leave empty to hide the map

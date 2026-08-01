@@ -72,6 +72,13 @@ permalink: /project/
     color: #333;
 }
 
+.pub-venue.to-appear {
+    background: transparent;
+    color: #6c757d;
+    border: 2px dashed #6c757d;
+    font-weight: 600;
+}
+
 .award {
     display: inline-block;
     background: #dc3545;
@@ -140,6 +147,30 @@ permalink: /project/
 }
 </style>
 
+
+<div class="year-section">
+    <h3 class="year-title">2026</h3>
+    
+    <ul class="publication-list">
+        <li class="pub-item">
+            <div class="pub-title">SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon</div>
+            <div class="pub-authors">Tianhong Xu, Saion Roy, <strong>Ruyi Ding</strong>, Aidong Adam Ding, Yunsi Fei</div>
+            <span class="pub-venue to-appear">CCS 2026 · To Appear</span>
+        </li>
+        
+        <li class="pub-item">
+            <div class="pub-title">Capacity Overflow: A Blind Spot for Backdoor Attacks in Vision MoE</div>
+            <div class="pub-authors">Xiaocheng Zou, Tiancheng Zheng, Xiaolin Xu, <strong>Ruyi Ding</strong></div>
+            <span class="pub-venue to-appear">ECCV 2026 · To Appear</span>
+        </li>
+        
+        <li class="pub-item">
+            <div class="pub-title">Shooting Falcon with One Fault: A Practical Rowhammer-based Fault Attack against Falcon</div>
+            <div class="pub-authors">Zihao Xin, Xin Zhang, Zhe Liu, Qianmei Wu, Qingni Shen, <strong>Ruyi Ding</strong>, Yixin Jiang, Wenqian Xu, Zhihong Liang, Lu Zhou, Fan Zhang</div>
+            <span class="pub-venue to-appear">DAC 2026 · To Appear</span>
+        </li>
+    </ul>
+</div>
 
 <div class="year-section">
     <h3 class="year-title">2025</h3>

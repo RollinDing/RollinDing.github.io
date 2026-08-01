@@ -3,15 +3,15 @@
 # type: paper | award | position | service | student | grant
 
 - date: "Jul 2026"
-  text: "One paper accepted to CCS 2026. Congratulations to Tianhong!"
+  text: "Paper accepted to CCS 2026: SLAC — access-driven CPU-to-GPU side-channel attacks via system-level cache on Apple Silicon. Congratulations to Tianhong!"
   type: "paper"
 
 - date: "Jun 2026"
-  text: "One paper accepted to ECCV 2026. Congratulations to Xiaocheng!"
+  text: "Paper accepted to ECCV 2026: Capacity Overflow — a blind spot for backdoor attacks in Vision MoE. Congratulations to Xiaocheng!"
   type: "paper"
 
 - date: "Feb 2026"
-  text: "One Paper accepted to DAC 2026。"
+  text: "Paper accepted to DAC 2026: Shooting Falcon with One Fault — a practical Rowhammer-based fault attack against Falcon."
   type: "paper"
 
 - date: "Dec 2025"
