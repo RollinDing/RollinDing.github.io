@@ -3,6 +3,24 @@
 # featured: true for top-tier venues: CCS, NDSS, ICCAD, DAC, NeurIPS, ECCV, ICCV, ASIACCS, HOST, AISTATS
 # award_type: "best_paper" | "nomination"  (omit if no award)
 
+- title: "SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon"
+  authors: "Tianhong Xu, Saion Roy, Ruyi Ding, Aidong Adam Ding, Yunsi Fei"
+  venue: "CCS 2026 · To Appear"
+  year: 2026
+  featured: true
+
+- title: "Capacity Overflow: A Blind Spot for Backdoor Attacks in Vision MoE"
+  authors: "Xiaocheng Zou, Tiancheng Zheng, Xiaolin Xu, Ruyi Ding"
+  venue: "ECCV 2026 · To Appear"
+  year: 2026
+  featured: true
+
+- title: "Shooting Falcon with One Fault: A Practical Rowhammer-based Fault Attack against Falcon"
+  authors: "Zihao Xin, Xin Zhang, Zhe Liu, Qianmei Wu, Qingni Shen, Ruyi Ding, Yixin Jiang, Wenqian Xu, Zhihong Liang, Lu Zhou, Fan Zhang"
+  venue: "DAC 2026 · To Appear"
+  year: 2026
+  featured: true
+
 - title: "MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs"
   authors: "Ruyi Ding*, Tianhong Xu*, Xinyi Shen, Aidong Adam Ding, Yunsi Fei"
   venue: "CCS 2025"
