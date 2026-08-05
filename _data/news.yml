@@ -26,6 +26,10 @@
   text: "Paper accepted to CCS 2025: MoEcho — side-channel attacks on Mixture-of-Experts LLMs."
   type: "paper"
 
+- date: "Aug 2025"
+  text: "Joined Louisiana State University (LSU) as an Assistant Professor in the Division of Electrical and Computer Engineering."
+  type: "position"
+
 - date: "May 2025"
   text: "Invited to serve as a TPC member for ICCAD 2025."
   type: "service"
@@ -57,14 +61,6 @@
 - date: "Jan 2025"
   text: "Awarded the Internet Society Fellowship at NDSS 2025."
   type: "award"
-
-- date: "Jan 2025"
-  text: "Joined Louisiana State University (LSU) as an Assistant Professor in the Division of Electrical and Computer Engineering."
-  type: "position"
-
-- date: "Jan 2025"
-  text: "Actively recruiting PhD students for Fall 2027 in AI security and hardware security — feel free to reach out at ruyiding@lsu.edu."
-  type: "student"
 
 - date: "Oct 2024"
   text: "Paper accepted to NDSS 2025: Probe-Me-Not — protecting pre-trained encoders from malicious probing."

@@ -5,25 +5,25 @@
 
 - title: "SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon"
   authors: "Tianhong Xu, Saion Roy, Ruyi Ding, Aidong Adam Ding, Yunsi Fei"
-  venue: "CCS 2026 · To Appear"
+  venue: "ACM Conference on Computer and Communications Security 2026 · To Appear"
   year: 2026
   featured: true
 
 - title: "Capacity Overflow: A Blind Spot for Backdoor Attacks in Vision MoE"
   authors: "Xiaocheng Zou, Tiancheng Zheng, Xiaolin Xu, Ruyi Ding"
-  venue: "ECCV 2026 · To Appear"
+  venue: "European Conference on Computer Vision 2026 · To Appear"
   year: 2026
   featured: true
 
 - title: "Shooting Falcon with One Fault: A Practical Rowhammer-based Fault Attack against Falcon"
   authors: "Zihao Xin, Xin Zhang, Zhe Liu, Qianmei Wu, Qingni Shen, Ruyi Ding, Yixin Jiang, Wenqian Xu, Zhihong Liang, Lu Zhou, Fan Zhang"
-  venue: "DAC 2026 · To Appear"
+  venue: "Design Automation Conference 2026 · To Appear"
   year: 2026
   featured: true
 
 - title: "MoEcho: Exploiting Side-Channel Attacks to Compromise User Privacy in Mixture-of-Experts LLMs"
   authors: "Ruyi Ding*, Tianhong Xu*, Xinyi Shen, Aidong Adam Ding, Yunsi Fei"
-  venue: "CCS 2025"
+  venue: "ACM Conference on Computer and Communications Security 2025"
   year: 2025
   featured: true
   links:
@@ -33,7 +33,7 @@
 
 - title: "Graph in the Vault: Protecting Edge GNN Inference with Trusted Execution Environment"
   authors: "Ruyi Ding*, Tianhong Xu*, Aidong Adam Ding, Yunsi Fei"
-  venue: "DAC 2025"
+  venue: "Design Automation Conference 2025"
   year: 2025
   featured: true
   links:
@@ -43,7 +43,7 @@
 
 - title: "MACPruning: Dynamic Operation Pruning to Mitigate Side-Channel DNN Model Extraction"
   authors: "Ruyi Ding, Cheng Gongye, Davis Ranney, Aidong Adam Ding, Yunsi Fei"
-  venue: "HOST 2025"
+  venue: "IEEE International Symposium on Hardware Oriented Security and Trust 2025"
   year: 2025
   featured: true
   award: "Best Paper Nomination"
@@ -55,7 +55,7 @@
 
 - title: "Probe-Me-Not: Protecting Pre-trained Encoders from Malicious Probing"
   authors: "Ruyi Ding, Tong Zhou, Lili Su, Aidong Adam Ding, Xiaolin Xu, Yunsi Fei"
-  venue: "NDSS 2025"
+  venue: "Network and Distributed System Security Symposium 2025"
   year: 2025
   featured: true
   links:
@@ -68,7 +68,7 @@
 
 - title: "GraphCroc: Cross-Correlation Autoencoder for Graph Structural Reconstruction"
   authors: "Shijin Duan*, Ruyi Ding*, Jiaxing He, Aidong Adam Ding, Yunsi Fei, Xiaolin Xu"
-  venue: "NeurIPS 2024"
+  venue: "Annual Conference on Neural Information Processing Systems 2024"
   year: 2024
   featured: true
   links:
@@ -78,7 +78,7 @@
 
 - title: "Non-transferable Pruning for Controlled Model Reuse"
   authors: "Ruyi Ding, Lili Su, Aidong Adam Ding, Yunsi Fei"
-  venue: "ECCV 2024"
+  venue: "European Conference on Computer Vision 2024"
   year: 2024
   featured: true
   links:
@@ -91,7 +91,7 @@
 
 - title: "VertexSerum: Poisoning Graph Neural Networks for Link Inference"
   authors: "Ruyi Ding*, Shijin Duan*, Xiaolin Xu, Yunsi Fei"
-  venue: "ICCV 2023"
+  venue: "IEEE/CVF International Conference on Computer Vision 2023"
   year: 2023
   featured: true
   links:
@@ -104,7 +104,7 @@
 
 - title: "EMShepherd: Detecting Adversarial Samples via Side-channel Leakage"
   authors: "Ruyi Ding, Cheng Gongye, Siyue Wang, Aidong Adam Ding, Yunsi Fei"
-  venue: "ASIACCS 2023"
+  venue: "ACM Asia Conference on Computer and Communications Security 2023"
   year: 2023
   featured: true
   award: "Distinguished Paper Award"
@@ -119,7 +119,7 @@
 
 - title: "A cross-platform cache timing attack framework via deep learning"
   authors: "Ruyi Ding, Ziyue Zhang, Xiang Zhang, Cheng Gongye, Yunsi Fei, Aidong Adam Ding"
-  venue: "DATE 2022"
+  venue: "Design, Automation & Test in Europe Conference & Exhibition 2022"
   year: 2022
   featured: false
   award: "Best Paper Nomination"
@@ -131,7 +131,7 @@
 
 - title: "Ran$Net: An Anti-Ransomware Methodology based on Cache Monitoring and Deep Learning"
   authors: "Xiang Zhang, Ziyue Zhang, Ruyi Ding, Cheng Gongye, Aidong Adam Ding, Yunsi Fei"
-  venue: "GLSVLSI 2022"
+  venue: "Great Lakes Symposium on VLSI 2022"
   year: 2022
   featured: false
 
@@ -149,7 +149,7 @@
 
 - title: "Deep Fourier Kernel for Self-Attentive Point Processes"
   authors: "Shixiang Zhu, Minghe Zhang, Ruyi Ding, Yao Xie"
-  venue: "AISTATS 2021"
+  venue: "International Conference on Artificial Intelligence and Statistics 2021"
   year: 2021
   featured: true
 
