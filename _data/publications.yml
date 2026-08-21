@@ -4,8 +4,8 @@
 # award_type: "best_paper" | "nomination"  (omit if no award)
 
 - title: "Groundhog Bit-Flip Attack: Seeding Infinite Generation Loops in Mixture-of-Experts LLMs through Bit Flips"
-  authors: "Huakang Lin, Tiancheng Zheng, Minxuan Sun, Tianhong Xu, Yunsi Fei, Fan Zhang, Ruyi Ding"
-  venue: "Empirical Methods in Natural Language Processing 2026"
+  authors: "Huakang Lin*, Tiancheng Zheng*, Minxuan Sun*, Tianhong Xu, Yunsi Fei, Fan Zhang, Ruyi Ding"
+  venue: "Empirical Methods in Natural Language Processing 2026 · To Appear"
   year: 2026
   featured: true
 
