@@ -3,6 +3,12 @@
 # featured: true for top-tier venues: CCS, NDSS, ICCAD, DAC, NeurIPS, ECCV, ICCV, ASIACCS, HOST, AISTATS
 # award_type: "best_paper" | "nomination"  (omit if no award)
 
+- title: "Groundhog Bit-Flip Attack: Seeding Infinite Generation Loops in Mixture-of-Experts LLMs through Bit Flips"
+  authors: "Huakang Lin, Tiancheng Zheng, Minxuan Sun, Tianhong Xu, Yunsi Fei, Fan Zhang, Ruyi Ding"
+  venue: "Empirical Methods in Natural Language Processing 2026"
+  year: 2026
+  featured: true
+
 - title: "SLAC: Access-Driven CPU-to-GPU Side-channel Attacks via System-Level Cache on Apple Silicon"
   authors: "Tianhong Xu, Saion Roy, Ruyi Ding, Aidong Adam Ding, Yunsi Fei"
   venue: "ACM Conference on Computer and Communications Security 2026 · To Appear"

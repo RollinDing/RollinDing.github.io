@@ -2,6 +2,10 @@
 # Ordered newest first.
 # type: paper | award | position | service | student | grant
 
+- date: "Aug 2026"
+  text: "One paper accepted to EMNLP 2026. Congratulations to Huakang!"
+  type: "paper"
+
 - date: "Jul 2026"
   text: "One paper accepted to CCS 2026. Congratulations to Tianhong!"
   type: "paper"
