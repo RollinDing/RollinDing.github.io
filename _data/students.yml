@@ -1,15 +1,9 @@
 # Current and alumni students
-# To add a student, append to the "current" or "alumni" list.
+# Split into three current-level lists, ordered PhD -> Master -> Undergraduate.
+# To add a student, append to the matching list.
 # photo: path relative to /assets/images/, or leave empty ""
 
-current:
-  - name: "Peyton T Tran"
-    degree: "Undergraduate"
-    since: "2026"
-    research: ""
-    photo: ""
-    website: ""
-    note: ""
+phd:
   - name: "Huangkang Lin"
     degree: "PhD Candidate @LSU"
     since: "2025"
@@ -24,6 +18,8 @@ current:
     photo: ""
     website: ""
     note: "Coadvise with Prof. Xiangwei Zhou"
+
+master:
   - name: "Tiancheng Zheng"
     degree: "MS @UCLA"
     since: "2025"
@@ -31,4 +27,14 @@ current:
     photo: ""
     website: ""
     note: "Will join Northeastern University for PhD in Fall 2026"
+
+undergrad:
+  - name: "Peyton T Tran"
+    degree: "Undergraduate"
+    since: "2026"
+    research: ""
+    photo: ""
+    website: ""
+    note: ""
+
 alumni: []
