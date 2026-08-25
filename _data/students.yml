@@ -3,6 +3,13 @@
 # photo: path relative to /assets/images/, or leave empty ""
 
 current:
+  - name: "Peyton T Tran"
+    degree: "Undergraduate"
+    since: "2026"
+    research: ""
+    photo: ""
+    website: ""
+    note: ""
   - name: "Huangkang Lin"
     degree: "PhD Candidate @LSU"
     since: "2025"
