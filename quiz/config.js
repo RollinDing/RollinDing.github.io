@@ -6,7 +6,7 @@
               https://script.google.com/macros/s/..../exec URL here.
    ------------------------------------------------------------------ */
 window.QUIZ_CONFIG = {
-  endpoint: "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE",
+  endpoint: "https://script.google.com/macros/s/AKfycbyVdLmGS5svZ8-fxRN_U_XuwSA1ySysyncYfkkb3IkshG9cF8Bdd7flz2VTKy_BoRzw/exec",
   courseName: "EE 4745 · Neural Computing",
   instructor: "Dr. Ruyi Ding",
   idLabel: "LSU ID (89…) or myLSU username",
