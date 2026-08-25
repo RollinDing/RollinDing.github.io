@@ -1,0 +1,26 @@
+{
+  "_comment": "One entry per class meeting. The QR code points to /quiz/?s=<key>. Correct answers are NOT stored here - they live in the 'Answers' tab of the Google Sheet so students cannot read them from this file.",
+  "sessions": {
+    "demo": {
+      "title": "Demo session",
+      "question": "Which of the following is a linear activation function?",
+      "options": [
+        "ReLU",
+        "Sigmoid",
+        "Identity, f(x) = x",
+        "Tanh"
+      ]
+    },
+    "L03": {
+      "title": "Lecture 3 · Backpropagation",
+      "question": "For a network with 3 hidden layers, roughly how does the cost of one backward pass compare to one forward pass?",
+      "options": [
+        "About the same",
+        "Roughly 2x the forward pass",
+        "Roughly 10x the forward pass",
+        "It depends only on the batch size"
+      ],
+      "closes": "2026-09-03T10:20:00-05:00"
+    }
+  }
+}

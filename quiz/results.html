@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Poll Results (Instructor)</title>
+<style>
+  :root{
+    --accent:#2e5090; --accent-weak:#e8edf7;
+    --bg:#f5f6f8; --card:#fff; --ink:#141821; --muted:#666f7e; --line:#dfe3ea;
+    --ok:#1a7f52; --err:#b3261e; --gold:#c8961e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --accent:#7d9bd6; --accent-weak:#1e2739;
+      --bg:#0f1218; --card:#171b23; --ink:#e8eaee; --muted:#98a1b0; --line:#2a303c;
+      --ok:#5dc48f; --err:#f2837b; --gold:#e0b654;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:20px; background:var(--bg); color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+  h1{font-size:20px;margin:0 0 4px}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end}
+  .row > div{flex:1;min-width:150px}
+  label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px}
+  input,select{width:100%;padding:10px;font-size:15px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink)}
+  button{
+    padding:10px 16px;font-size:15px;font-weight:600;border:none;border-radius:9px;
+    background:var(--accent);color:#fff;cursor:pointer;white-space:nowrap
+  }
+  button.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+  .stats{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:16px}
+  .stat b{display:block;font-size:30px;line-height:1.1;font-variant-numeric:tabular-nums}
+  .stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .bar{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  .bar .k{flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;
+          background:var(--accent-weak);color:var(--accent);font-weight:700;font-size:13px}
+  .bar .track{flex:1;height:26px;background:var(--bg);border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .bar .fill{display:block;height:100%;background:var(--accent);transition:width .4s}
+  .bar.correct .fill{background:var(--ok)}
+  .bar .n{flex:0 0 78px;text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  td.name{white-space:normal}
+  .tag{font-size:12px;padding:2px 7px;border-radius:20px;background:var(--accent-weak);color:var(--accent)}
+  .tag.dup{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+  .scroll{overflow-x:auto}
+  .msg{padding:11px 14px;border-radius:9px;font-size:14px;margin-bottom:14px}
+  .msg.err{background:#fdecea;color:#b3261e;border:1px solid #b3261e}
+  .hidden{display:none!important}
+  .live{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--ok);animation:pulse 1.6s infinite}
+  @keyframes pulse{50%{opacity:.25}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>In-class poll — live results</h1>
+  <div class="sub">Instructor view. Do not project the roster while students are still answering.</div>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label for="sess">Session code</label>
+        <input id="sess" type="text" placeholder="L03" autocapitalize="off" spellcheck="false">
+      </div>
+      <div>
+        <label for="key">Admin key</label>
+        <input id="key" type="password" placeholder="from Script Properties" autocomplete="off">
+      </div>
+      <div style="flex:0 0 auto">
+        <button id="go">Load</button>
+      </div>
+      <div style="flex:0 0 auto">
+        <button id="auto" class="ghost">Auto-refresh: off</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="msg" class="msg err hidden"></div>
+
+  <div id="panel" class="hidden">
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><b id="nTotal">0</b><span>Submissions</span></div>
+        <div class="stat"><b id="nCorrect">–</b><span>Correct</span></div>
+        <div class="stat"><b id="nDup">0</b><span>Repeat attempts</span></div>
+        <div class="stat"><b id="nDev">0</b><span>Distinct devices</span></div>
+      </div>
+      <div id="bars"></div>
+      <div class="live" style="margin-top:14px"><span class="dot"></span><span id="stamp"></span></div>
+    </div>
+
+    <div class="card">
+      <div class="row" style="margin-bottom:14px">
+        <div style="flex:0 0 auto"><button id="xlsx">Open Google Sheet (export .xlsx)</button></div>
+        <div style="flex:0 0 auto"><button id="csv" class="ghost">Download this session as CSV</button></div>
+        <div style="flex:0 0 auto"><button id="toggleRoster" class="ghost">Hide names</button></div>
+      </div>
+      <div class="scroll">
+        <table id="tbl">
+          <thead><tr><th>#</th><th>Time</th><th>Name</th><th>LSU ID</th><th>Answer</th><th>Result</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+  var CFG = window.QUIZ_CONFIG || {};
+  var el = function (id) { return document.getElementById(id); };
+  var params = new URLSearchParams(location.search);
+  var timer = null, rows = [], sheetUrl = "", rosterHidden = false, bank = null;
+
+  // The Web App stores only the letter a student picked; the option text lives
+  // in questions.json, so pull it in once for nicer bar labels.
+  fetch("questions.json", { cache: "no-store" })
+    .then(function (r) { return r.json(); })
+    .then(function (b) { bank = b; })
+    .catch(function () { bank = null; });
+
+  function optionsFor(sess) {
+    var q = bank && bank.sessions && bank.sessions[sess];
+    return (q && q.options) || [];
+  }
+
+  el("sess").value = params.get("s") || localStorage.getItem("quiz.admin.sess") || "";
+  el("key").value  = params.get("k") || localStorage.getItem("quiz.admin.key")  || "";
+
+  function fail(m) { el("msg").textContent = m; el("msg").classList.remove("hidden"); }
+  function clearFail() { el("msg").classList.add("hidden"); }
+
+  function fetchResults() {
+    var s = el("sess").value.trim(), k = el("key").value.trim();
+    if (!s || !k) return fail("Enter both a session code and the admin key.");
+    localStorage.setItem("quiz.admin.sess", s);
+    localStorage.setItem("quiz.admin.key", k);
+    var url = CFG.endpoint + "?" + new URLSearchParams({ action: "results", session: s, key: k });
+    return fetch(url, { redirect: "follow", cache: "no-store" })
+      .then(function (r) { return r.text(); })
+      .then(function (body) {
+        var d;
+        try { d = JSON.parse(body); } catch (e) { throw new Error("Unexpected reply from the Web App. Is the endpoint in config.js correct?"); }
+        if (!d.ok) throw new Error(d.error || "Request refused.");
+        clearFail(); render(d);
+      })
+      .catch(function (e) { fail(e.message); });
+  }
+
+  function render(d) {
+    rows = d.rows || [];
+    sheetUrl = d.sheetUrl || "";
+    el("panel").classList.remove("hidden");
+
+    var counts = {}, devices = {}, correct = 0, graded = (d.correctAnswer || "") !== "";
+    rows.forEach(function (r) {
+      counts[r.choice] = (counts[r.choice] || 0) + 1;
+      if (r.device) devices[r.device] = 1;
+      if (graded && r.choice === d.correctAnswer) correct++;
+    });
+
+    el("nTotal").textContent = rows.length;
+    el("nDup").textContent = d.duplicates || 0;
+    el("nDev").textContent = Object.keys(devices).length;
+    el("nCorrect").textContent = graded
+      ? correct + " (" + (rows.length ? Math.round(100 * correct / rows.length) : 0) + "%)"
+      : "–";
+
+    var opts = optionsFor(el("sess").value.trim());
+    var keys = opts.length
+      ? opts.map(function (_, i) { return "ABCDEF"[i]; })
+      : Object.keys(counts).sort();
+    var max = Math.max(1, rows.length);
+    el("bars").innerHTML = "";
+    keys.forEach(function (k, i) {
+      var n = counts[k] || 0;
+      var div = document.createElement("div");
+      div.className = "bar" + (graded && k === d.correctAnswer ? " correct" : "");
+      div.innerHTML =
+        '<span class="k"></span><span class="track"><span class="fill"></span></span><span class="n"></span>';
+      div.querySelector(".k").textContent = k;
+      div.querySelector(".fill").style.width = (100 * n / max) + "%";
+      div.querySelector(".n").textContent = n + "  (" + Math.round(100 * n / max) + "%)";
+      div.title = opts[i] || "";
+      el("bars").appendChild(div);
+    });
+
+    var tb = el("tbl").querySelector("tbody");
+    tb.innerHTML = "";
+    rows.forEach(function (r, i) {
+      var tr = document.createElement("tr");
+      var res = !graded ? "" : (r.choice === d.correctAnswer ? "correct" : "wrong");
+      [
+        String(i + 1),
+        r.time || "",
+        rosterHidden ? "—" : r.name,
+        rosterHidden ? "—" : r.sid,
+        r.choice,
+        res,
+        r.repeat ? "repeat" : ""
+      ].forEach(function (v, ci) {
+        var td = document.createElement("td");
+        if (ci === 2) td.className = "name";
+        if (ci === 5 && v) { td.innerHTML = '<span class="tag"></span>'; td.firstChild.textContent = v;
+                             td.firstChild.style.color = v === "correct" ? "var(--ok)" : "var(--err)";
+                             td.firstChild.style.background = "transparent";
+                             td.firstChild.style.border = "1px solid currentColor"; }
+        else if (ci === 6 && v) { td.innerHTML = '<span class="tag dup"></span>'; td.firstChild.textContent = v; }
+        else td.textContent = v;
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+
+    el("stamp").textContent = "updated " + new Date().toLocaleTimeString();
+  }
+
+  function downloadCsv() {
+    var head = ["Time", "Session", "Name", "LSU ID", "Answer", "Answer text", "Device"];
+    var lines = [head.join(",")].concat(rows.map(function (r) {
+      return [r.time, r.session, r.name, r.sid, r.choice, r.choiceText, r.device]
+        .map(function (v) { return '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"'; })
+        .join(",");
+    }));
+    var blob = new Blob(["﻿" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "poll-" + (el("sess").value.trim() || "session") + ".csv";
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+  }
+
+  el("go").addEventListener("click", fetchResults);
+  el("key").addEventListener("keydown", function (e) { if (e.key === "Enter") fetchResults(); });
+  el("sess").addEventListener("keydown", function (e) { if (e.key === "Enter") fetchResults(); });
+  el("csv").addEventListener("click", downloadCsv);
+  el("xlsx").addEventListener("click", function () {
+    if (sheetUrl) window.open(sheetUrl, "_blank", "noopener");
+    else fail("The Web App did not report a spreadsheet URL.");
+  });
+  el("toggleRoster").addEventListener("click", function () {
+    rosterHidden = !rosterHidden;
+    this.textContent = rosterHidden ? "Show names" : "Hide names";
+    fetchResults();
+  });
+  el("auto").addEventListener("click", function () {
+    if (timer) { clearInterval(timer); timer = null; this.textContent = "Auto-refresh: off"; }
+    else { timer = setInterval(fetchResults, 5000); this.textContent = "Auto-refresh: on (5s)"; fetchResults(); }
+  });
+
+  if (el("sess").value && el("key").value) fetchResults();
+})();
+</script>
+</body>
+</html>

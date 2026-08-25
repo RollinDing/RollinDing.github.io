@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2e5090">
+<title>In-Class Check-In</title>
+<style>
+  :root{
+    --accent:#2e5090; --accent-weak:#e8edf7; --accent-ink:#1d3560;
+    --bg:#f5f6f8; --card:#ffffff; --ink:#141821; --muted:#666f7e;
+    --line:#dfe3ea; --ok:#1a7f52; --ok-bg:#e6f4ec; --err:#b3261e; --err-bg:#fdecea;
+    --radius:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --accent:#7d9bd6; --accent-weak:#1e2739; --accent-ink:#a8c0ea;
+      --bg:#0f1218; --card:#171b23; --ink:#e8eaee; --muted:#98a1b0;
+      --line:#2a303c; --ok:#5dc48f; --ok-bg:#12271d; --err:#f2837b; --err-bg:#2a1614;
+    }
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--ink);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding:16px 14px 48px; display:flex; justify-content:center;
+  }
+  .wrap{width:100%; max-width:520px}
+  header{margin:6px 2px 16px}
+  .course{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); font-weight:700}
+  h1{font-size:21px; line-height:1.3; margin:6px 0 2px; font-weight:650}
+  .sub{font-size:13px; color:var(--muted)}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 16px; margin-bottom:14px;
+  }
+  label{display:block; font-size:13px; font-weight:600; margin:0 0 6px; color:var(--muted)}
+  input[type=text]{
+    width:100%; padding:13px 12px; font-size:17px; color:var(--ink);
+    background:var(--bg); border:1px solid var(--line); border-radius:10px; outline:none;
+  }
+  input[type=text]:focus{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-weak)}
+  .field + .field{margin-top:14px}
+  .hint{font-size:12px; color:var(--muted); margin-top:6px}
+  .who{
+    display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+    font-size:14px; color:var(--muted);
+  }
+  .who b{color:var(--ink); font-weight:600}
+  .linkbtn{
+    background:none; border:none; padding:0; font:inherit; font-size:13px;
+    color:var(--accent); text-decoration:underline; cursor:pointer;
+  }
+  .q{font-size:18px; font-weight:600; line-height:1.45; margin:0 0 14px; white-space:pre-wrap}
+  .opt{
+    display:flex; align-items:flex-start; gap:12px; width:100%; text-align:left;
+    padding:14px 14px; margin-bottom:10px; font:inherit; color:var(--ink);
+    background:var(--card); border:1.5px solid var(--line); border-radius:12px; cursor:pointer;
+    transition:border-color .12s, background .12s;
+  }
+  .opt:last-child{margin-bottom:0}
+  .opt .k{
+    flex:0 0 28px; height:28px; border-radius:50%; display:grid; place-items:center;
+    background:var(--bg); border:1.5px solid var(--line); font-size:14px; font-weight:700; color:var(--muted);
+  }
+  .opt .t{flex:1; padding-top:3px; white-space:pre-wrap}
+  .opt[aria-pressed="true"]{border-color:var(--accent); background:var(--accent-weak)}
+  .opt[aria-pressed="true"] .k{background:var(--accent); border-color:var(--accent); color:#fff}
+  button.primary{
+    width:100%; padding:16px; font-size:17px; font-weight:650; color:#fff;
+    background:var(--accent); border:none; border-radius:12px; cursor:pointer;
+  }
+  button.primary:disabled{opacity:.45; cursor:not-allowed}
+  .note{font-size:12px; color:var(--muted); text-align:center; margin-top:10px}
+  .banner{padding:12px 14px; border-radius:10px; font-size:14px; margin-bottom:14px}
+  .banner.err{background:var(--err-bg); color:var(--err); border:1px solid var(--err)}
+  .banner.ok{background:var(--ok-bg); color:var(--ok); border:1px solid var(--ok)}
+  .done{text-align:center; padding:30px 18px}
+  .tick{
+    width:64px; height:64px; margin:0 auto 16px; border-radius:50%;
+    background:var(--ok-bg); color:var(--ok); display:grid; place-items:center; font-size:34px; font-weight:700;
+  }
+  .done h2{margin:0 0 6px; font-size:20px}
+  .receipt{
+    display:inline-block; margin-top:14px; padding:8px 14px; border-radius:8px;
+    background:var(--bg); border:1px dashed var(--line);
+    font:15px/1 ui-monospace,SFMono-Regular,Menlo,monospace; letter-spacing:.12em; color:var(--ink);
+  }
+  .hidden{display:none !important}
+  .spin{
+    width:22px;height:22px;border-radius:50%;border:2.5px solid var(--line);
+    border-top-color:var(--accent);animation:sp .8s linear infinite;margin:26px auto;
+  }
+  @keyframes sp{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="course" id="course">&nbsp;</div>
+    <h1 id="title">Loading…</h1>
+    <div class="sub" id="sub"></div>
+  </header>
+
+  <div id="loading"><div class="spin"></div></div>
+
+  <div id="fatal" class="card hidden">
+    <div class="banner err" id="fatalMsg"></div>
+    <div class="hint">If you think this is a mistake, ask your instructor to re-show the QR code.</div>
+  </div>
+
+  <form id="app" class="hidden" autocomplete="on" novalidate>
+
+    <div class="card" id="idCard">
+      <div id="idFields">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name"
+                 autocapitalize="words" placeholder="First Last" enterkeyhint="next">
+        </div>
+        <div class="field">
+          <label for="sid" id="sidLabel">LSU ID</label>
+          <input type="text" id="sid" name="sid" autocomplete="username"
+                 autocapitalize="off" autocorrect="off" spellcheck="false"
+                 placeholder="89xxxxxxx" enterkeyhint="done">
+          <div class="hint" id="sidHint">Your 9-digit LSU ID, or your myLSU username.</div>
+        </div>
+      </div>
+      <div id="idSummary" class="who hidden">
+        <span>Submitting as <b id="whoName"></b> <span id="whoId"></span></span>
+        <button type="button" class="linkbtn" id="changeWho">change</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q" id="question"></p>
+      <div id="options"></div>
+    </div>
+
+    <div id="submitErr" class="banner err hidden"></div>
+
+    <button type="submit" class="primary" id="submitBtn" disabled>Submit</button>
+    <div class="note" id="footNote">One submission per student. This also records your attendance.</div>
+  </form>
+
+  <div id="done" class="card done hidden">
+    <div class="tick">&#10003;</div>
+    <h2>You're checked in</h2>
+    <div class="sub" id="doneSub"></div>
+    <div class="receipt" id="receipt"></div>
+  </div>
+
+</div>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var CFG = window.QUIZ_CONFIG || {};
+  var LETTERS = ["A", "B", "C", "D", "E", "F"];
+
+  var el = function (id) { return document.getElementById(id); };
+  var params = new URLSearchParams(location.search);
+  var sessionId = (params.get("s") || params.get("session") || "").trim();
+
+  var state = { choice: null, session: null, busy: false };
+
+  /* ---------- small helpers ---------- */
+
+  function show(node) { node.classList.remove("hidden"); }
+  function hide(node) { node.classList.add("hidden"); }
+
+  function fatal(msg) {
+    hide(el("loading")); hide(el("app"));
+    el("title").textContent = "Can't open this poll";
+    el("sub").textContent = "";
+    el("fatalMsg").textContent = msg;
+    show(el("fatal"));
+  }
+
+  function store(key, val) {
+    try { val === null ? localStorage.removeItem(key) : localStorage.setItem(key, val); }
+    catch (e) { /* private browsing */ }
+  }
+  function load(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+
+  function deviceId() {
+    var d = load("quiz.device");
+    if (!d) {
+      d = (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+        : String(Date.now()) + "-" + Math.random().toString(36).slice(2, 10);
+      store("quiz.device", d);
+    }
+    return d;
+  }
+
+  /* ---------- identity ---------- */
+
+  function savedIdentity() {
+    var n = load("quiz.name"), i = load("quiz.sid");
+    return (n && i) ? { name: n, sid: i } : null;
+  }
+
+  function useSummary(idty) {
+    el("name").value = idty.name;
+    el("sid").value = idty.sid;
+    el("whoName").textContent = idty.name;
+    el("whoId").textContent = "(" + idty.sid + ")";
+    hide(el("idFields")); show(el("idSummary"));
+  }
+
+  function useFields() {
+    show(el("idFields")); hide(el("idSummary"));
+    el("name").focus();
+  }
+
+  function identity() {
+    return { name: el("name").value.trim().replace(/\s+/g, " "),
+             sid: el("sid").value.trim() };
+  }
+
+  /* ---------- rendering ---------- */
+
+  function renderQuestion(q) {
+    el("question").textContent = q.question;
+    var box = el("options");
+    box.innerHTML = "";
+    q.options.forEach(function (text, idx) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "opt";
+      b.setAttribute("aria-pressed", "false");
+      b.dataset.idx = String(idx);
+      var k = document.createElement("span");
+      k.className = "k"; k.textContent = LETTERS[idx] || String(idx + 1);
+      var t = document.createElement("span");
+      t.className = "t"; t.textContent = text;
+      b.appendChild(k); b.appendChild(t);
+      b.addEventListener("click", function () { pick(idx); });
+      box.appendChild(b);
+    });
+  }
+
+  function pick(idx) {
+    state.choice = idx;
+    Array.prototype.forEach.call(el("options").children, function (b) {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.idx) === idx));
+    });
+    refreshSubmit();
+  }
+
+  function refreshSubmit() {
+    var idty = identity();
+    var ready = !state.busy && state.choice !== null && idty.name.length >= 2 && idty.sid.length >= 3;
+    el("submitBtn").disabled = !ready;
+  }
+
+  /* ---------- submit ---------- */
+
+  function submit(ev) {
+    ev.preventDefault();
+    if (state.busy) return;
+    var idty = identity();
+    if (idty.name.length < 2) { useFields(); return warn("Please enter your full name."); }
+    if (idty.sid.length < 3) { useFields(); return warn("Please enter your LSU ID."); }
+    if (state.choice === null) return warn("Please choose an answer.");
+
+    store("quiz.name", idty.name);
+    store("quiz.sid", idty.sid);
+
+    state.busy = true;
+    el("submitBtn").disabled = true;
+    el("submitBtn").textContent = "Submitting…";
+    hide(el("submitErr"));
+
+    var payload = {
+      action: "submit",
+      session: sessionId,
+      questionId: state.session.title || sessionId,
+      name: idty.name,
+      sid: idty.sid,
+      choice: LETTERS[state.choice] || String(state.choice + 1),
+      choiceText: state.session.options[state.choice],
+      device: deviceId(),
+      clientTime: new Date().toISOString()
+    };
+
+    if (CFG.demoMode) {
+      setTimeout(function () { succeed({ receipt: "DEMO-0000", duplicate: false }); }, 500);
+      return;
+    }
+
+    send(payload)
+      .then(succeed)
+      .catch(function (err) {
+        state.busy = false;
+        el("submitBtn").disabled = false;
+        el("submitBtn").textContent = "Try again";
+        warn(err && err.message ? err.message
+             : "Could not reach the server. Check your connection and tap Try again.");
+      });
+  }
+
+  /* Apps Script rejects CORS pre-flights, so the POST must stay a "simple"
+     request: text/plain body, no custom headers. If the POST is blocked
+     anyway (some campus proxies), fall back to a GET with query params. */
+  function send(payload) {
+    return fetch(CFG.endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload),
+      redirect: "follow"
+    })
+      .then(readJson)
+      .catch(function () {
+        var qs = new URLSearchParams(payload).toString();
+        return fetch(CFG.endpoint + "?" + qs, { method: "GET", redirect: "follow" })
+          .then(readJson);
+      });
+  }
+
+  function readJson(res) {
+    return res.text().then(function (body) {
+      var data;
+      try { data = JSON.parse(body); }
+      catch (e) { throw new Error("The server replied in an unexpected format. Tell your instructor."); }
+      if (!data.ok) throw new Error(data.error || "The server refused the submission.");
+      return data;
+    });
+  }
+
+  function succeed(data) {
+    hide(el("app"));
+    el("doneSub").textContent = data.duplicate
+      ? "We already had a submission from you for this question — your first answer is the one on record."
+      : "Recorded at " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) + ".";
+    el("receipt").textContent = data.receipt || "OK";
+    show(el("done"));
+    store("quiz.done." + sessionId, "1");
+    window.scrollTo(0, 0);
+  }
+
+  function warn(msg) {
+    el("submitErr").textContent = msg;
+    show(el("submitErr"));
+    refreshSubmit();
+  }
+
+  /* ---------- boot ---------- */
+
+  el("course").textContent = CFG.courseName || "";
+  if (CFG.idLabel) el("sidHint").textContent = CFG.idLabel;
+
+  if (!sessionId) {
+    return fatal("No session code in the link. Please scan the QR code shown in class rather than typing the address by hand.");
+  }
+
+  fetch("questions.json", { cache: "no-store" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("questions.json " + r.status);
+      return r.json();
+    })
+    .then(function (bank) {
+      var q = (bank.sessions || {})[sessionId];
+      if (!q) throw new Error("unknown-session");
+      if (!q.options || q.options.length < 2) throw new Error("bad-session");
+
+      if (q.closes && new Date(q.closes).getTime() < Date.now()) {
+        el("title").textContent = q.title || "Poll closed";
+        return fatal("This poll closed at " +
+          new Date(q.closes).toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }) +
+          ". Talk to your instructor if you were in class and could not submit in time.");
+      }
+
+      state.session = q;
+      el("title").textContent = q.title || "Question";
+      el("sub").textContent = CFG.instructor || "";
+      renderQuestion(q);
+
+      var idty = savedIdentity();
+      if (idty) useSummary(idty);
+
+      hide(el("loading"));
+      show(el("app"));
+
+      if (load("quiz.done." + sessionId) === "1") {
+        el("footNote").textContent =
+          "This device already submitted for this question. Submitting again will not replace your first answer.";
+      }
+    })
+    .catch(function (err) {
+      if (err && err.message === "unknown-session") {
+        fatal("Session “" + sessionId + "” is not open. Make sure you scanned today's QR code.");
+      } else {
+        fatal("Could not load the question. Check your connection and reload the page.");
+      }
+    });
+
+  el("changeWho").addEventListener("click", useFields);
+  el("name").addEventListener("input", refreshSubmit);
+  el("sid").addEventListener("input", refreshSubmit);
+  el("app").addEventListener("submit", submit);
+})();
+</script>
+</body>
+</html>
