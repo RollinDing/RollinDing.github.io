@@ -1,6 +1,18 @@
 {
   "_comment": "One entry per class meeting. The QR code points to /quiz/?s=<key>. Correct answers are NOT stored here - they live in the 'Answers' tab of the Google Sheet so students cannot read them from this file.",
   "sessions": {
+    "L01": {
+      "title": "Lecture 1 · Check-in",
+      "question": "Which AI tool do you use the most?",
+      "options": [
+        "ChatGPT (or Codex)",
+        "Claude (or Claude Code)",
+        "Gemini",
+        "Grok",
+        "Something else, or none"
+      ],
+      "closes": "2026-08-25T17:00:00-05:00"
+    },
     "demo": {
       "title": "Demo session",
       "question": "Which of the following is a linear activation function?",
