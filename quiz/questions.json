@@ -23,16 +23,16 @@
         "Tanh"
       ]
     },
-    "L03": {
-      "title": "Lecture 3 · Backpropagation",
-      "question": "For a network with 3 hidden layers, roughly how does the cost of one backward pass compare to one forward pass?",
+    "L05": {
+      "title": "Lecture 5 \u00b7 Check-in",
+      "question": "Ridge regression adds one extra term to the least-squares loss. Which one?",
       "options": [
-        "About the same",
-        "Roughly 2x the forward pass",
-        "Roughly 10x the forward pass",
-        "It depends only on the batch size"
+        "\u03bb \u00b7 \u03a3 |w|, the sum of the absolute weights (L1)",
+        "\u03bb \u00b7 \u03a3 w\u00b2, the sum of the squared weights (L2)",
+        "\u03bb \u00b7 (number of nonzero weights), counting what survives (L0)",
+        "Nothing is added; ridge changes how the loss is minimized"
       ],
-      "closes": "2026-09-03T10:20:00-05:00"
+      "closes": "2026-09-08T14:50:00-05:00"
     }
   }
 }
